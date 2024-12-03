@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulär</title>
+    <link rel="stylesheet" href="formulär.css">
+</head>
+<body>
+    <header>
+        <h1>Välkommen!</h1>
+        <h2>Välj något av följande alternativ</h2>
+    </header>
+
+    <main>
+        <h3>Välj ditt favoritdjur</h3>
+        <label><input type="checkbox" class="checkbox" tabindex="0"> Häst</label>
+        <label><input type="checkbox" class="checkbox" tabindex="0"> Hund</label>
+        <label><input type="checkbox" class="checkbox" tabindex="0"> Katt</label>
+
+        <h3>Välj din favoritfärg</h3>
+        <label><input type="checkbox" class="checkbox" tabindex="0"> Gul</label>
+        <label><input type="checkbox" class="checkbox" tabindex="0"> Blå</label>
+        <label><input type="checkbox" class="checkbox" tabindex="0"> Grön</label>
+    </main>
+
+    <script>
+        // Välj alla checkboxar med klassen "checkbox"
+        const checkboxes = document.querySelectorAll('.checkbox');
+        let currentCheckboxIndex = 0;
+
+        // Sätt fokus på den första checkboxen
+        checkboxes[currentCheckboxIndex].focus();
+
+        // Lyssna på tangenttryckningar
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowDown') {
+                // Flytta fokus till nästa checkbox
+                currentCheckboxIndex = (currentCheckboxIndex + 1) % checkboxes.length;
+                checkboxes[currentCheckboxIndex].focus();
+                event.preventDefault();
+            } else if (event.key === 'ArrowUp') {
+                // Flytta fokus till föregående checkbox
+                currentCheckboxIndex = (currentCheckboxIndex - 1 + checkboxes.length) % checkboxes.length;
+                checkboxes[currentCheckboxIndex].focus();
+                event.preventDefault();
+            } else if (event.key === ' ') {
+                // Växla checkboxens status vid mellanslag
+                checkboxes[currentCheckboxIndex].checked = !checkboxes[currentCheckboxIndex].checked;
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
