@@ -132,3 +132,19 @@
     color: #e0e0e0;
     border: 1px solid #555;
   }
+
+  .product-list {
+    display: flex;
+    justify-content: row;
+    gap: 2rem;
+    border-radius: 8px;
+    list-style: none;
+    
+  }
+
+  .product-card {
+    padding: 2rem;
+    background-color: #0056b3;
+    border-radius: 8px;
+
+  }
