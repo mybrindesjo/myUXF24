@@ -29,6 +29,9 @@ const fetchData = async () => {
     } catch (error) {
         // VISAR FELET I FRONETEND
         dataContainer.innerHTML = `<p>Någonting gick fel i hämtningen av Pokémons.</p>`;
+    } finally {
+        // Dölj laddningsikonen när datan har hämtats
+        loader.style.display = "none";
     }
 };
 
