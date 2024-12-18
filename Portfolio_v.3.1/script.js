@@ -1,5 +1,5 @@
-const spaceId = "pwepd9ce6tho"; // Ersätt med ditt Space ID
-const accessToken = "AR6UhDMSPTqZuqrw-TU9Yjz7kyGtZYK-Gj2zWGev740"; // Ta bort det extra "&"
+const spaceId = localStorage.getItem("space_id"); // Ersätt med ditt Space ID
+const accessToken = localStorage.getItem("access_token"); // Ta bort det extra "&"
 const url = `https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}`;
 
 // Hämtar container från DOM
