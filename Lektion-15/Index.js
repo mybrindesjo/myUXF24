@@ -1,5 +1,6 @@
 const dataContainer = document.getElementById("data-container");
 
+
 const fetchData = async () => {
     try {
         // HÄMTA DATA FRÅN POKÉMONE API
@@ -15,6 +16,7 @@ const fetchData = async () => {
 
         // HÄMTA DETALJER FÖR VARJE POKÉMON
         const detailedPokemonData = await fetchPokemonDetails(data.results);
+        console.log(data);
 
         // RENDERA DATA PÅ SIDAN
         const pokemonHTML = detailedPokemonData.map((pokemon) => {
