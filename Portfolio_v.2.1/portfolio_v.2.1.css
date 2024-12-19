@@ -165,6 +165,11 @@ a:visited{
     padding: 1rem;
 }
 
+.project:hover {
+    transform: translateY(-50px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
 .project-photo {
     width: auto;
     height: 150px;
@@ -178,6 +183,12 @@ a:visited{
 }
 
 .profile-photo {
+    max-width: 30rem;
+    border-radius: 8px;
+}
+
+.about-photo {
+    max-width: 40rem;
     border-radius: 8px;
 }
 
