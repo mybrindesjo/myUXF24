@@ -45,17 +45,17 @@ const fetchData = async () => {
     });
 
     // Hitta container för korten
-    const postContainer = document.getElementById("card-container");
+    const postContainer = document.getElementById("info-container");
     if (postContainer) {
       // Skapa HTML för alla poster
       const postHTML = postsWithDetails.map(post => {
         return `
-          <div class="artist-list">
+          <div class="artist-card">
             <h2>${post.name}</h2>
-            <p>${post.description}</p>
-            <p>Day: ${post.day}</p>
-            <p>Genre: ${post.genre}</p>
-            <p>Stage: ${post.stage}</p>
+            <p class="description">${post.description}</p>
+            <p class="day">Day: ${post.day}</p>
+            <p class="genre" >Genre: ${post.genre}</p>
+            <p class="genre">Stage: ${post.stage}</p>
           </div>
         `;
       }).join("");

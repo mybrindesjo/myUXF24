@@ -1,4 +1,6 @@
-<html lang="en">
+<!DOCTYPE html>
+
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,10 +8,67 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <header>
-    <h1>Musikfestival</h1>
+    <h1>Musikfestivalen</h1>
 </header>
 <body>
-    <div id="card-container" class="card-container"></div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Hem</a></li>
+            <li><a href="#info">Information</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section class="info">
+        <h2><strong>Stockholm Music Festival 2024 – En Musikupplevelse för Alla!</strong></h2>
+        <p>Stockholm stad bjuder in till en storslagen musikfestival under sommaren 2024! Festivalen är en årlig tradition som samlar musikälskare från hela världen för en helg fylld med fantastiska artister, smakfull mat och oförglömliga upplevelser. Oavsett om du är en festivalveteran eller nybörjare, finns det något för alla att njuta av.</p>
+    </section>
+
+
+    <section class="info-contianer">
+
+        <div class="info-artist">
+            <h2>Artister</h2>
+            <p></p>
+        </div>
+        <div class="info-food">
+            <h2>Mat</h2>
+        </div>
+     </section>
+
+     <section class="contact-form">
+        <h2>Kontakta mig</h2>
+        <form action="#" method="post" class="form">
+            <div class="input-from">
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+            </div>
+
+            <div class="input-form">
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" placeholder="Din e-postadress" required>
+            </div>
+
+            <div class="input-form">
+                <label for="subject">Ämne</label>
+                <input type="text" id="subject" name="subject" placeholder="Ämnet för ditt meddelande" required>
+            </div>
+
+            <div class="input-form">
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message" placeholder="Ditt meddelande" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="form-btn">Skicka meddelande</button>
+        </form>
+    </section>
+
+
     <script src="script.js"></script>
 </body>
+
+<footer>
+    <p>&copy; Musikfestivalen 2024.</p>
+
+</footer>
 </html>
