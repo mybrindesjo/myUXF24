@@ -1,74 +1,88 @@
-const baseUrl = "https://cdn.contentful.com/spaces/";
-const SPACE_ID = localStorage.getItem("space_id");
-const ACCESS_TOKEN = localStorage.getItem("access_token");
-const apiURL = `${baseUrl}${SPACE_ID}/entries?access_token=${ACCESS_TOKEN}`;
+document.addEventListener("DOMContentLoaded", () => {
+  const baseUrl = "https://cdn.contentful.com/spaces/";
+  const SPACE_ID = localStorage.getItem("space_id"); // Hämta från localStorage
+  const ACCESS_TOKEN = localStorage.getItem("access_token"); // Hämta från localStorage
+  const CONTENT_TYPE = "artist"; // Uppdatera med rätt content_type
+  const apiURL = `${baseUrl}${SPACE_ID}/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE}`;
 
-const fetchData = async () => {
-  try {
-    const response = await fetch(apiURL);
+  console.log("API URL:", apiURL); // Logga API-URL för felsökning
 
-    if (!response.ok) {
-      throw new Error("HTTP-fel! Något gick snett i förfrågan.");
+  const fetchContentTypes = async () => {
+    const contentTypeURL = `${baseUrl}${SPACE_ID}/content_types?access_token=${ACCESS_TOKEN}`;
+    try {
+      const response = await fetch(contentTypeURL);
+      if (!response.ok) {
+        throw new Error("HTTP-fel! Något gick snett i förfrågan.");
+      }
+      const data = await response.json();
+      console.log("Content Types:", data);
+    } catch (error) {
+      console.error("Fel vid hämtning av content types:", error);
     }
+  };
 
-    const data = await response.json();
-    console.log(data);
+  // Anropa funktionen för att hämta och logga alla innehållstyper
+  fetchContentTypes();
 
-    // Om includes finns, få referenser till Entry för day, genre och stage
-    const dayEntries = data.includes && data.includes.Entry ? data.includes.Entry : [];
-    const genreEntries = data.includes && data.includes.Entry ? data.includes.Entry : [];
-    const stageEntries = data.includes && data.includes.Entry ? data.includes.Entry : [];
+  const fetchData = async () => {
+    try {
+      const response = await fetch(apiURL);
 
-    // Skapa en ny array med detaljer för varje artist
-    const postsWithDetails = data.items.map((post) => {
-      const dayId = post.fields.day ? post.fields.day.sys.id : null;
-      const genreId = post.fields.genre ? post.fields.genre.sys.id : null;
-      const stageId = post.fields.stage ? post.fields.stage.sys.id : null;
+      if (!response.ok) {
+        throw new Error("HTTP-fel! Något gick snett i förfrågan.");
+      }
 
-      // Hitta Day från includes
-      const day = dayId ? dayEntries.find(entry => entry.sys.id === dayId) : null;
+      const data = await response.json();
+      console.log(data);
 
-      // Hitta Genre från includes
-      const genre = genreId ? genreEntries.find(entry => entry.sys.id === genreId) : null;
+      // Logga data.includes.Entry för felsökning
+      console.log("Includes Entry:", data.includes.Entry);
 
-      // Hitta Stage från includes
-      const stage = stageId ? stageEntries.find(entry => entry.sys.id === stageId) : null;
+      const cardWithDetails = data.items.map((item) => {
+        const dayId = item.fields.day.sys.id;
+        const dayEntry = data.includes.Entry.find((entry) => entry.sys.id === dayId);
 
-      // Returnera ett nytt objekt med artistens namn, beskrivning och detaljer om day, genre, stage
-      return {
-        name: post.fields.name,
-        description: post.fields.description,
-        day: day ? day.fields.name : 'Ingen dag', // Om day finns, visa day.name
-        genre: genre ? genre.fields.name : 'Ingen genre', // Om genre finns, visa genre.name
-        stage: stage ? stage.fields.name : 'Ingen scen', // Om stage finns, visa stage.name
-      };
-    });
+        if (!dayEntry) {
+          console.error(`Day entry not found for dayId: ${dayId}`);
+          return null;
+        }
 
-    // Hitta container för korten
-    const postContainer = document.getElementById("info-container");
-    if (postContainer) {
-      // Skapa HTML för alla poster
-      const postHTML = postsWithDetails.map(post => {
-        return `
-          <div class="artist-card">
-            <h2>${post.name}</h2>
-            <p class="description">${post.description}</p>
-            <p class="day">Day: ${post.day}</p>
-            <p class="genre" >Genre: ${post.genre}</p>
-            <p class="genre">Stage: ${post.stage}</p>
+        // Logga dayEntry för felsökning
+        console.log("Day Entry:", dayEntry);
+
+        const dayDescription = dayEntry.fields.description; // Uppdatera för att få dagbeskrivningen
+
+        return {
+          artist: item.fields.name,
+          description: item.fields.description,
+          day: dayDescription,
+        };
+      }).filter(card => card !== null); // Filtrera bort null-värden
+
+      const container = document.getElementById("artist-container");
+      if (!container) {
+        console.error("Element with id 'artist-container' not found.");
+        console.log("Current HTML document:", document.documentElement.innerHTML); // Logga hela HTML-dokumentet
+        return;
+      }
+
+      cardWithDetails.forEach((card) => {
+        const cardHTML = `
+          <div class="card">
+            <h2>${card.artist}</h2>
+            <p>${card.day}</p>
+            <p>${card.description}</p>
           </div>
         `;
-      }).join("");
+        container.innerHTML += cardHTML;
+      });
 
-      // Lägg till HTML i container
-      postContainer.innerHTML = postHTML;
+    } catch (error) {
+      console.error("Fel vid hämtning av data:", error);
     }
+  };
 
-  } catch (error) {
-    console.error("Fel vid hämtning av data:", error);
-  }
-};
-
-fetchData();
+  fetchData();
+});
 
 
