@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -14,48 +14,74 @@ body {
     justify-content: space-between;
     height: 100%;
     text-align: center;
-    background-color: #f9f9f9;
-  }
+    background-color: #e0f7fa;
+}
 
 header {
-    background-color: #333;
+    background-color: #ff4081;
     color: white;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff4081;
     color: white;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 .info-contianer {
     display: flex;
-    flex-direction: column;
-    background-color: aqua;
+    flex-direction: row;
+    background-color: #fce4ec;
     padding: 1rem;
     margin: 1rem;
     gap: 1rem;
     border-radius: 10px;
 }
 
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 1rem;
+}
+
 .info, .info-artist, .info-food {
-    background-color: aquamarine;
+    background-color: #f8bbd0;
     padding: 1rem;
     margin: 1rem;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background-color: #fff;
+    margin: 1rem;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    gap: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
 }
 
 form {
@@ -64,19 +90,19 @@ form {
     gap: 1rem;
     padding: 1rem;
     margin: 1rem;
-    background-color: rgb(58, 107, 107);
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
 input, textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ff80ab;
     border-radius: 8px;
     font-size: 1rem;
     color: #333;
+    background-color: #e7e7e7;
 }
-
 
 .input-form {
     display: flex;
@@ -84,7 +110,7 @@ input, textarea {
 }
 
 .form-btn {
-    background-color: rgb(16, 145, 22);
+    background-color: #ff4081;
 }
 
 .nav-links {
@@ -99,15 +125,15 @@ input, textarea {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: rgb(111, 139, 163);
+    background-color: #ff4081;
 }
 
 a:hover {
-    color: bisque;
+    color: #ff4081;
 }
 
 a {
-    color: #77bfa3;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -121,7 +147,7 @@ label {
 .form-btn {
     width: 100%;
     padding: 1rem;
-    background-color: #e65907;
+    background-color: #ff4081;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -130,6 +156,78 @@ label {
 }
 
 .form-btn:hover {
-    background-color: #ff9900;
-    color: #334406;
-} 
+    background-color: #ff80ab;
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    margin: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #ff4081;
+}
+
+.card p {
+    color: #333;
+}
+
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
+    background-color: #fce4ec;
+    border-radius: 10px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Additional colorful elements */
+header, footer, .form-btn, #card-container, .contact-form  {
+    background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
+}
+
+.info, .info-artist, .info-food, {
+    background: linear-gradient(45deg, #f8bbd0, #fce4ec, #f8bbd0, #ffcc80, #f8bbd0);
+}
+
+input, textarea {
+    border: 1px solid #ff80ab;
+}
+
+a:hover {
+    color: #ff4081;
+}
