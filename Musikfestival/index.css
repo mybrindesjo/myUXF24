@@ -73,7 +73,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form {
+.contact-form, .ticket-form {
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -109,10 +109,6 @@ input, textarea {
     flex-direction: column;
 }
 
-.form-btn {
-    background-color: #ff4081;
-}
-
 .nav-links {
     display: flex;
     flex: 1;
@@ -144,7 +140,7 @@ label {
     color: #333;
 }
 
-.form-btn {
+.form-btn, .submit-btn {
     width: 100%;
     padding: 1rem;
     background-color: #ff4081;
@@ -155,10 +151,11 @@ label {
     margin-top: 1rem;
 }
 
-.form-btn:hover {
-    background-color: #ff80ab;
-    color: #fff;
+button:hover {
+    background-color: #3ca114;
+    color: #fff; 
 }
+
 
 .card {
     display: flex;
@@ -215,12 +212,12 @@ label {
     transform: scale(1.1);
 }
 
-/* Additional colorful elements */
-header, footer, .form-btn, #card-container, .contact-form  {
+
+header, footer, .submit-btn, .form-btn, #card-container, .contact-form .ticket-form {
     background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
 }
 
-.info, .info-artist, .info-food, {
+.info, .info-artist, .info-food {
     background: linear-gradient(45deg, #f8bbd0, #fce4ec, #f8bbd0, #ffcc80, #f8bbd0);
 }
 
@@ -229,5 +226,6 @@ input, textarea {
 }
 
 a:hover {
-    color: #ff4081;
+    color: #d2ec08;
 }
+
