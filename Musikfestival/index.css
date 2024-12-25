@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
     height: 100%;
     text-align: center;
-    background-color: #e0f7fa;
+    background-color: #fefefe;
 }
 
 header {
@@ -151,11 +151,6 @@ label {
     margin-top: 1rem;
 }
 
-button:hover {
-    background-color: #3ca114;
-    color: #fff; 
-}
-
 
 .card {
     display: flex;
@@ -213,7 +208,7 @@ button:hover {
 }
 
 
-header, footer, .submit-btn, .form-btn, #card-container, .contact-form .ticket-form {
+header, footer, .submit-btn, .form-btn, #card-container, .contact-form .ticket-form, .filter-continer {
     background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
 }
 
@@ -229,3 +224,50 @@ a:hover {
     color: #d2ec08;
 }
 
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.filter-continer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #5a001e;
+    border-radius: 10px;
+}
+
+.genre-filter, .day-filter, .stage-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.filter-btn {
+    padding: 1rem;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#genre-filter, #day-filter, #stage-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #fdf3f3;
+    border-radius: 10px;
+}
