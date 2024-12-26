@@ -121,10 +121,14 @@ const displayCards = (cards) => {
     return `<div class="card">
               <h2>${card.artist}</h2>
               <p>${card.description}</p>
-              <p>${card.day}</p>
-              <p>${card.stage}</p>
-              <p>${card.genre}</p>
-              <p>${card.date}</p>
+
+              <div class="card-details">
+                <p><strong>Genre: </strong>${card.genre}</p>
+                <p><strong>Scen: </strong>${card.stage}</p>
+                <p><strong>Dag: </strong>${card.day}</p>
+                <p><strong>Datum: </strong>${card.date}</p>
+              
+              </div>
             </div>`;
   }).join(''); // Kombinera HTML-strängarna till en enda sträng
 
