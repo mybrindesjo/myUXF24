@@ -58,12 +58,21 @@ footer {
     border-radius: 10px;
 }
 
-.contact-info {
+.footer-contact-info {
     display: flex;
     flex-direction: column;
     text-align: left;
     gap: 1rem;
 }
+
+.contact-info, .contact-details {
+    padding: 1rem;
+    margin: 1rem;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: left;
+}
+
 
 .info, .info-artist, .info-food {
     background-color: #f8bbd0;
@@ -82,6 +91,7 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     gap: 1rem;
+    min-width: 100%;
 }
 
 form {
@@ -213,7 +223,7 @@ label {
 }
 
 
-header, footer, #card-container, .contact-form .ticket-form {
+header, footer, #card-container, .contact-form .ticket-form, .contact-info, .contact-details, .info, .info-artist, .info-food, .filters, .filter-continer, .genre-filter, .day-filter, .stage-filter {
     background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
 }
 
@@ -254,6 +264,8 @@ a:hover {
     margin: 1rem;
     background-color: #f8bbd0;
     border-radius: 10px;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .genre-filter, .day-filter, .stage-filter {
@@ -308,18 +320,19 @@ a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 2000px;
+        min-width: 400px; 
         max-height: auto;
+        padding: 1rem;
+        margin: 1rem;
     }
 
-    .body-wrap {
+    .body-wrap{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        
+        gap: 1rem;
     }
-
 
 
 
