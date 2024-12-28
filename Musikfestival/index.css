@@ -223,7 +223,7 @@ label {
 }
 
 
-header, footer, #card-container, .contact-form .ticket-form, .contact-info, .contact-details, .info, .info-artist, .info-food, .filters, .filter-continer, .genre-filter, .day-filter, .stage-filter {
+header, footer, #card-container, .contact-form .ticket-form, .contact-info, .contact-details, .info, .info-artist, .info-food{
     background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
 }
 
