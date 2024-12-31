@@ -50,8 +50,8 @@ footer {
 
 .info-contianer {
     display: flex;
-    flex-direction: row;
-    background-color: #fce4ec;
+    flex-direction: column;
+    background-color: #b91b4f;
     padding: 1rem;
     margin: 1rem;
     gap: 1rem;
@@ -222,8 +222,16 @@ label {
     transform: scale(1.1);
 }
 
+.info-card {
+    background-color: #cccccc;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
 
-header, footer, #card-container, .contact-form .ticket-form, .contact-info, .contact-details, .info, .info-artist, .info-food{
+header, footer, #card-container, .contact-form .ticket-form, .contact-info, .contact-details, .info-artist, .info-food{
     background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
 }
 
