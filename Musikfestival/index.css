@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+    background-color: #fefefe;
+}
+
+header {
+    background-color: #ff4081;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff4081;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-contianer {
+    display: flex;
+    flex-direction: column;
+    background-color: #b91b4f;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1rem;
+}
+
+.contact-info, .contact-details {
+    padding: 1rem;
+    margin: 1rem;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: left;
+}
+
+
+.info, .info-artist, .info-food {
+    background-color: #f8bbd0;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form, .ticket-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    min-width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ff80ab;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #e7e7e7;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ff4081;
+}
+
+a:hover {
+    color: #ff4081;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+label {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-btn, .submit-btn, .filter-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+.card-details {
+    text-align: left;
+    background-color: #ffcc80;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #303a13;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #ff4081;
+}
+
+#card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
+    background-color: #fce4ec;
+    border-radius: 10px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.info-card {
+    background-color: #cccccc;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+header, footer, #card-container, .contact-form .ticket-form, .contact-info, .contact-details, .info-artist, .info-food{
+    background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
+}
+
+.info, .info-artist, .info-food {
+    background: linear-gradient(45deg, #f8bbd0, #fce4ec, #f8bbd0, #ffcc80, #f8bbd0);
+}
+
+button:hover {
+    background-color: #ffcc80;
+    color: #2c1b01;
+}
+
+input, textarea {
+    border: 1px solid #ff80ab;
+}
+
+a:hover {
+    color: #d2ec08;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.filter-continer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #f8bbd0;
+    border-radius: 10px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.genre-filter, .day-filter, .stage-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+#genre-filter, #day-filter, #stage-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+@media (min-width: 800px) {
+
+    .footer-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+        width: 100%;    
+    }
+
+    
+    #card-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;        
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 300px;
+        max-width: 300px;
+        justify-content: space-between;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 400px; 
+        max-height: auto;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .body-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+    }
+
+
+
+}
+

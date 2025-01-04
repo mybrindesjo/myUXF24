@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+#artists-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.artist-card {
+    background-color: #fff;
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    #artists-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .artist-card {
+        width: 80%;
+    }
+}

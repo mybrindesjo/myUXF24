@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card {
+    background-color: blue;
+    gap: 8rem;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+}
