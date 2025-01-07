@@ -122,6 +122,9 @@ const displayCards = (cards) => {
               <h2>${card.artist}</h2>
               <p>${card.description}</p>
 
+              <a class="ticket" href="/Musikfestival/ticket.html">Biljetter</a>
+
+
               <div class="card-details">
                 <p><strong>Genre: </strong>${card.genre}</p>
                 <p><strong>Scen: </strong>${card.stage}</p>
