@@ -4,7 +4,6 @@ const ACCESS_TOKEN = localStorage.getItem("access_token").trim(); // Hämta frå
 const CONTENT_TYPE = "artist"; // Uppdatera med rätt content_type
 const apiURL = `${baseUrl}${SPACE_ID}/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE}`;
 
-
 const fetchData = async () => {
   try {
     const response = await fetch(apiURL);
@@ -20,7 +19,7 @@ const fetchData = async () => {
     const stages = new Set();
     const genres = new Set();
 
-    cardWithDetails = data.items.map((item) => {
+    const cardWithDetails = data.items.map((item) => {
       const dayId = item.fields.day.sys.id;
       const stageId = item.fields.stage.sys.id;
       const genreId = item.fields.genre.sys.id;
@@ -76,7 +75,7 @@ const fetchData = async () => {
 
     console.log("Filter Result:", filterResult);
 
-    // Fyll filterelementen med data
+    // FILTRERING
     const dayFilter = document.getElementById("day-filter");
     const stageFilter = document.getElementById("stage-filter");
     const genreFilter = document.getElementById("genre-filter");
@@ -124,13 +123,11 @@ const displayCards = (cards) => {
 
               <a class="ticket" href="/Musikfestival/ticket.html">Biljetter</a>
 
-
               <div class="card-details">
                 <p><strong>Genre: </strong>${card.genre}</p>
                 <p><strong>Scen: </strong>${card.stage}</p>
                 <p><strong>Dag: </strong>${card.day}</p>
                 <p><strong>Datum: </strong>${card.date}</p>
-              
               </div>
             </div>`;
   }).join(''); // Kombinera HTML-strängarna till en enda sträng
