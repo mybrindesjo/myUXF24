@@ -4,6 +4,19 @@ const ACCESS_TOKEN = localStorage.getItem("access_token").trim(); // Hämta frå
 const CONTENT_TYPE = "artist"; // Uppdatera med rätt content_type
 const apiURL = `${baseUrl}${SPACE_ID}/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE}`;
 
+const artistImages = {
+  "3EaJyvMEJZn0SEujFTAfhh": "IMG/arianagrande.jpeg",
+  "3h10Md9vCJztB4LVWq4SZw": "IMG/theweeknd.webp",
+  "3dfDAlSCyLOEMjnLYRHDW3": "IMG/travisscott.jpeg",
+  "6uOdMg1FwV2X0XzMbsRTqI": "IMG/snarkypuppy.jpeg",
+  "4Jg8p2V4BRWHUWpMJTmLVb": "IMG/imagiedragons.jpeg",
+  "3POGTLp40vViwu3PYg4ZQs": "IMG/thelumineers.jpeg",
+  "1s4kb4NRwcIxXtH43ZwG2a": "IMG/drake.jpeg",
+  "2y2H4WReTkLEuIsXb8TuV2": "IMG/billieelish.jpeg",
+  "1kYPDZKvt1jknL0g37RDnJ": "IMG/slipknot.jpeg",
+  "1m6BKmWSVKkcanEncErKQv": "IMG/metallica.jpeg",
+};
+
 const fetchData = async () => {
   try {
     const response = await fetch(apiURL);
@@ -58,6 +71,7 @@ const fetchData = async () => {
         stage: stageName,
         genre: genreName,
         date: date,
+        image: artistImages[item.sys.id] || "IMG/default.jpg" // Lägg till bildvägen
       };
 
       // Logga artistCard för varje artist
@@ -65,6 +79,9 @@ const fetchData = async () => {
 
       return artistCard;
     }).filter(card => card !== null); // Filtrera bort null-värden
+
+    // Sortera artistkort i bokstavsordning
+    cardWithDetails.sort((a, b) => a.artist.localeCompare(b.artist));
 
     // Sammanställ filterresultat
     const filterResult = {
@@ -117,17 +134,16 @@ const displayCards = (cards) => {
   }
 
   const cardHTML = cards.map((card) => {
-    return `<div class="card">
-              <h2>${card.artist}</h2>
-              <p>${card.description}</p>
-
-              <a class="ticket" href="/Musikfestival/ticket.html">Biljetter</a>
-
-              <div class="card-details">
-                <p><strong>Genre: </strong>${card.genre}</p>
-                <p><strong>Scen: </strong>${card.stage}</p>
-                <p><strong>Dag: </strong>${card.day}</p>
-                <p><strong>Datum: </strong>${card.date}</p>
+    return `<div class="card" style="background-image: url('${card.image}');">
+              <div class="card-content">
+                <h2>${card.artist}</h2>
+                <p>${card.description}</p>
+                <div class="card-details">
+                  <p><strong>Genre: </strong>${card.genre}</p>
+                  <p><strong>Scen: </strong>${card.stage}</p>
+                  <p><strong>Dag: </strong>${card.day}</p>
+                  <p><strong>Datum: </strong>${card.date}</p>
+                </div>
               </div>
             </div>`;
   }).join(''); // Kombinera HTML-strängarna till en enda sträng

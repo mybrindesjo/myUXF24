@@ -5,48 +5,48 @@
 }
 
 body {
-    background-color: #ffeb3b;
+    background-color: #1a1a1a;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    color: #ffffff;
 }
 
 h1, h2 {
-    font-family: 'Modak';
+    font-family: 'Modak', cursive;
     font-size: 3.5rem;
-    color: #ff5722;
-    text-shadow: 2px 2px 4px #000000;
+    color: #ff4081;
+    text-shadow: 2px 2px #000000;
 }
 
 label {
-    font-family: 'Modak';
+    font-family: 'Modak', cursive;
     font-size: 1.5rem;
-    color: #4caf50;
+    color: #ff4081;
 }
 
 p {
-    font-family: 'sans-serif';
-    color: #212121;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
 }
 
 a {
-    color: #ff5722;
+    color: #ff4081;
     text-decoration: none;
 }
 
 header, .navbar {
-    background-color: #03a9f4;
+    background-color: #3f51b5;
     text-align: center;
+    padding: 1rem;
 }
 
 .navbar {
-    padding: 2rem;
+    padding: 1rem;
     color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: #ffffff;
     list-style: none;
 }
@@ -55,11 +55,11 @@ header, .navbar {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
     margin: 1rem;
-    background-color: #8bc34a;
+    background-image: url('IMG/background.webp');
+    background-size: cover;
+    background-position: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .genre-filter, .day-filter, .stage-filter {
@@ -71,14 +71,13 @@ header, .navbar {
     background-color: #ffffff;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #genre-filter, #day-filter, #stage-filter {
     gap: 1rem;
     padding: 1rem;
     margin: 1rem;
-    background-color: #cddc39;
+    background-color: #d8d8d8;
     border-radius: 10px;
     color: #000000;
 }
@@ -86,30 +85,60 @@ header, .navbar {
 .filter-btn {
     width: 100%;
     padding: 1rem;
-    background-color: #ff9800;
+    background-color: #ff4081;
     color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     margin-top: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 .filter-btn:hover {
-    background-color: #ff5722;
-    transform: scale(1.05);
+    background-color: #e91e63;
 }
 
 .card {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 1rem;
     gap: 1rem;
     border-radius: 8px;
-    background-color: #ffc107;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Ensure the background image does not repeat */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    color: #ffffff; /* Ensure text is readable on background image */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(48, 63, 159, 1), rgba(48, 63, 159, 0.8), rgba(48, 63, 159, 0.6), rgba(48, 63, 159, 0.4), rgba(48, 63, 159, 0.2)); /* Stronger gradient overlay */
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.card-image {
+    display: none; /* Hide the image element */
 }
 
 #card-container {
@@ -120,25 +149,33 @@ header, .navbar {
 }
 
 .card-details {
-    background-color: #ff5722;
+    background-color: #3f51b5;
     padding: 1rem;
     border-radius: 8px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .ticket {
     color: #ffffff;
-    background-color: #ff9800;
+    background-color: #ff4081;
     padding: 1rem;
     text-align: center;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.ticket:hover {
+    background-color: #e91e63;
 }
 
 footer {
-    background-color: #03a9f4;
+    background-color: #3f51b5;
     color: #ffffff;
     padding: 1rem;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .social-media {
@@ -154,7 +191,6 @@ footer {
     height: 50px;
     border-radius: 50%;
     transition: transform 0.3s;
-    cursor: pointer;
 }
 
 .social-icon:hover {
@@ -165,32 +201,76 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
 }
 
+.intro-image img {
+    width: 100vw;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.info-card {
+    background-color: #512da8;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.image img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
 @media (min-width: 800px) {
-
     .footer-info {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 2rem;
-        width: 100%;    
+        width: 100%;
     }
 
-    
     #card-container {
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        flex-direction: row;        
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     .card {
         flex: 1 1 300px;
         max-width: 300px;
-        justify-content: space-between;
     }
 
     .filters {
@@ -202,21 +282,18 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-width: 400px; 
+        min-width: 400px;
         max-height: auto;
         padding: 1rem;
         margin: 1rem;
     }
 
-    .body-wrap{
+    .body-wrap {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
         gap: 1rem;
     }
-
-
-
 }
 
