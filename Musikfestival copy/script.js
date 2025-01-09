@@ -144,6 +144,7 @@ const displayCards = (cards) => {
                   <p><strong>Dag: </strong>${card.day}</p>
                   <p><strong>Datum: </strong>${card.date}</p>
                 </div>
+                <a href="/Musikfestival copy/ticket.html" class="corner-banner">BOKA BILJETTER</a>
               </div>
             </div>`;
   }).join(''); // Kombinera HTML-strängarna till en enda sträng
