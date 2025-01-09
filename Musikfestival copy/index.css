@@ -13,7 +13,7 @@ body {
     gap: 1rem;
 }
 
-h1, h2, label{
+h1, h2, h3, label{
     font-family: 'Modak', 'General Sans', 'Cormorant Garamond';
     font-size: 3.5rem;
     color: #ff4081;
@@ -147,6 +147,16 @@ header, .navbar {
     gap: 1rem;
 }
 
+.artist-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #c5c5c5;
+    border-radius: 10px;
+    color: #ffffff;
+}
 .card-details {
     background-color: #3f51b5;
     padding: 1rem;
@@ -257,6 +267,7 @@ header, .navbar {
     border-radius: 1rem;
     background-color: #d3d3d3;
 }
+
 
 .cart {
     display: flex;
@@ -395,6 +406,10 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.stage-card {
+    background-color: #512da8;
 }
 
 @media (min-width: 800px) {
