@@ -5,16 +5,16 @@ const CONTENT_TYPE = "artist"; // Uppdatera med rätt content_type
 const apiURL = `${baseUrl}${SPACE_ID}/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE}`;
 
 const artistImages = {
-  "3EaJyvMEJZn0SEujFTAfhh": "IMG/arianagrande.jpeg",
-  "3h10Md9vCJztB4LVWq4SZw": "IMG/theweeknd.webp",
-  "3dfDAlSCyLOEMjnLYRHDW3": "IMG/travisscott.jpeg",
-  "6uOdMg1FwV2X0XzMbsRTqI": "IMG/snarkypuppy.jpeg",
-  "4Jg8p2V4BRWHUWpMJTmLVb": "IMG/imagiedragons.jpeg",
-  "3POGTLp40vViwu3PYg4ZQs": "IMG/thelumineers.jpeg",
-  "1s4kb4NRwcIxXtH43ZwG2a": "IMG/drake.jpeg",
-  "2y2H4WReTkLEuIsXb8TuV2": "IMG/billieelish.jpeg",
-  "1kYPDZKvt1jknL0g37RDnJ": "IMG/slipknot.jpeg",
-  "1m6BKmWSVKkcanEncErKQv": "IMG/metallica.jpeg",
+  "3EaJyvMEJZn0SEujFTAfhh": "IMG/bild1.jpg", // ARIANA GRANDE
+  "3h10Md9vCJztB4LVWq4SZw": "IMG/bild2.jpg", // THE WEEKND
+  "3dfDAlSCyLOEMjnLYRHDW3": "IMG/bild3.jpg", // TRAVIS SCOTT
+  "6uOdMg1FwV2X0XzMbsRTqI": "IMG/bild4.jpg", // SNARKY PUPPY
+  "4Jg8p2V4BRWHUWpMJTmLVb": "IMG/bild5.jpg", // IMAGINE DRAGONS
+  "3POGTLp40vViwu3PYg4ZQs": "IMG/bild6.jpg", // THE LUMINEERS
+  "1s4kb4NRwcIxXtH43ZwG2a": "IMG/bild7.jpg", // DRAKE
+  "2y2H4WReTkLEuIsXb8TuV2": "IMG/bild8.jpg", // BILLIE EILISH
+  "1kYPDZKvt1jknL0g37RDnJ": "IMG/bild9.jpg", // SLIPKNOT
+  "1m6BKmWSVKkcanEncErKQv": "IMG/bild10.jpg", // METALLICA
 };
 
 const fetchData = async () => {
