@@ -9,7 +9,7 @@ const artistImages = {
   "3h10Md9vCJztB4LVWq4SZw": "IMG/Artist/theweeknd.jpg",       // THE WEEKND
   "3dfDAlSCyLOEMjnLYRHDW3": "IMG/Artist/travisscott.jpg",     // TRAVIS SCOTT
   "6uOdMg1FwV2X0XzMbsRTqI": "IMG/Artist/snarkypuppy.jpg",     // SNARKY PUPPY
-  "4Jg8p2V4BRWHUWpMJTmLVb": "IMG/Artist/imaginedragons.jpg",   // IMAGINE DRAGONS
+  "4Jg8p2V4BRWHUWpMJTmLVb": "IMG/Artist/imaginedragons.jpg",  // IMAGINE DRAGONS
   "3POGTLp40vViwu3PYg4ZQs": "IMG/Artist/thelumineers.jpg",    // THE LUMINEERS
   "1s4kb4NRwcIxXtH43ZwG2a": "IMG/Artist/drake.jpg",           // DRAKE
   "2y2H4WReTkLEuIsXb8TuV2": "IMG/Artist/billieeilish.jpg",    // BILLIE EILISH
