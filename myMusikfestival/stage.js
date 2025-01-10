@@ -112,7 +112,7 @@ const fetchData = async () => {
 };
 
 const displayCards = (cards) => {
-  const container = document.getElementById("card-container");
+  const container = document.getElementById("stage-container");
   if (!container) return;
 
   const cardHTML = cards.map((card) => {
