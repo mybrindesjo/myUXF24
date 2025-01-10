@@ -17,6 +17,8 @@ const artistImages = {
   "1m6BKmWSVKkcanEncErKQv": "IMG/bild10.jpg", // METALLICA
 };
 
+let sortedStageCards = [];
+
 const fetchData = async () => {
   try {
     const response = await fetch(apiURL);
@@ -89,7 +91,7 @@ const fetchData = async () => {
     });
 
     // Sortera stagekort i bokstavsordning
-    const sortedStageCards = Object.values(stageCards).sort((a, b) => a.stage.localeCompare(b.stage));
+    sortedStageCards = Object.values(stageCards).sort((a, b) => a.stage.localeCompare(b.stage));
 
     // Sammanställ filterresultat
     const filterResult = {
@@ -181,10 +183,12 @@ const applyFilters = () => {
   const selectedStage = document.getElementById("stage-filter").value;
   const selectedGenre = document.getElementById("genre-filter").value;
 
-  const filteredCards = cardWithDetails.filter(card => {
-    return (selectedDay === "all" || card.day === selectedDay) &&
-           (selectedStage === "all" || card.stage === selectedStage) &&
-           (selectedGenre === "all" || card.genre === selectedGenre);
+  const filteredCards = sortedStageCards.filter(card => {
+    return card.artists.some(artist => 
+      (selectedDay === "all" || artist.day === selectedDay) &&
+      (selectedStage === "all" || card.stage === selectedStage) &&
+      (selectedGenre === "all" || artist.genre === selectedGenre)
+    );
   });
 
   displayCards(filteredCards);

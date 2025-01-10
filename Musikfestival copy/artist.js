@@ -17,6 +17,8 @@ const artistImages = {
   "1m6BKmWSVKkcanEncErKQv": "IMG/bild10.jpg", // METALLICA
 };
 
+let cardWithDetails = [];
+
 const fetchData = async () => {
   try {
     const response = await fetch(apiURL);
@@ -32,7 +34,7 @@ const fetchData = async () => {
     const stages = new Set();
     const genres = new Set();
 
-    const cardWithDetails = data.items.map((item) => {
+    cardWithDetails = data.items.map((item) => {
       const dayId = item.fields.day.sys.id;
       const stageId = item.fields.stage.sys.id;
       const genreId = item.fields.genre.sys.id;

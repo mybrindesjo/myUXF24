@@ -13,12 +13,23 @@ body {
     gap: 1rem;
 }
 
-h1, h2, h3, label{
+h1 {
     font-family: 'Modak', 'General Sans', 'Cormorant Garamond';
     font-size: 3.5rem;
     color: #ff4081;
     text-shadow: 2px 2px #000000;
     text-align: center;
+}
+
+label {
+    font-size: 1rem;
+    color: #ff4081;
+}
+
+h2 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #ff4081;
 }
 
 p {
@@ -54,44 +65,53 @@ header, .navbar {
     gap: 1rem;
     margin: 1rem;
     padding: 1rem;
-    background-color: #3f51b5;
+    background-color: #ffffff;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .genre-filter, .day-filter, .stage-filter {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    text-align: center;
+    gap: 0.5rem;
+}
+
+.genre-filter label, .day-filter label, .stage-filter label {
+    font-size: 1rem;
+    color: #333333;
+    font-weight: bold;
 }
 
 #genre-filter, #day-filter, #stage-filter {
-    gap: 1rem;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: #d8d8d8;
-    border-radius: 10px;
-    color: #000000;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 .filter-btn {
     width: 100%;
     padding: 1rem;
-    background-color: #ff4081;
+    background-color: #3f51b5;
     color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     margin-top: 1rem;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .filter-btn:hover {
-    background-color: #e91e63;
+    background-color: #303f9f;
 }
 
 .card {
@@ -248,8 +268,7 @@ header, .navbar {
     width: 100%;
 }
 
-.ticket-form input,
-.ticket-form select {
+.ticket-form input, .ticket-form select {
     width: 100%;
     padding: 1rem;
     border: 1px solid #cccccc;
@@ -322,6 +341,9 @@ footer {
     background-color: #3f51b5;
     color: #ffffff;
     padding: 1rem;
+}
+
+.footer-contact-info {
     text-align: center;
 }
 
@@ -431,7 +453,7 @@ footer {
     }
 
     .filters {
-        display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
     }
 
@@ -443,6 +465,10 @@ footer {
         max-height: auto;
         padding: 1rem;
         margin: 1rem;
+        background-image: url('/Musikfestival copy/IMG/background.webp');
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
     }
 
     .body-wrap {
@@ -461,6 +487,10 @@ footer {
     .cart {
         flex: 1;
         max-width: 900px;
+    }
+
+    .intro-image {
+        display: none;
     }
 }
 
