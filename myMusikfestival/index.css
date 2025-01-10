@@ -39,7 +39,6 @@ p {
 a {
     color: #ff4081;
     text-decoration: none;
-    font-size: medium;
 }
 
 header, .navbar {
@@ -327,20 +326,6 @@ header, .navbar {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     color: #666666;
-}
-
-.cart button {
-    padding: 1rem;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.cart button:hover {
-    background-color: #0056b3;
 }
 
 a:hover {
