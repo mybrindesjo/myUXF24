@@ -1,19 +1,19 @@
 const baseUrl = "https://cdn.contentful.com/spaces/";
-const SPACE_ID = localStorage.getItem("space_id"); // Hämta från localStorage
-const ACCESS_TOKEN = localStorage.getItem("access_token").trim(); // Hämta från localStorage och trimma eventuella mellanslag
-const CONTENT_TYPE = "artist"; // Uppdatera med rätt content_type
+const SPACE_ID = localStorage.getItem("space_id");
+const ACCESS_TOKEN = localStorage.getItem("access_token").trim();
+const CONTENT_TYPE = "artist";
 const apiURL = `${baseUrl}${SPACE_ID}/entries?access_token=${ACCESS_TOKEN}&content_type=${CONTENT_TYPE}`;
 
 const artistImages = {
-  "3EaJyvMEJZn0SEujFTAfhh": "IMG/bild1.jpg", // ARIANA GRANDE
-  "3h10Md9vCJztB4LVWq4SZw": "IMG/bild2.jpg", // THE WEEKND
-  "3dfDAlSCyLOEMjnLYRHDW3": "IMG/bild3.jpg", // TRAVIS SCOTT
-  "6uOdMg1FwV2X0XzMbsRTqI": "IMG/bild4.jpg", // SNARKY PUPPY
-  "4Jg8p2V4BRWHUWpMJTmLVb": "IMG/bild5.jpg", // IMAGINE DRAGONS
-  "3POGTLp40vViwu3PYg4ZQs": "IMG/bild6.jpg", // THE LUMINEERS
-  "1s4kb4NRwcIxXtH43ZwG2a": "IMG/bild7.jpg", // DRAKE
-  "2y2H4WReTkLEuIsXb8TuV2": "IMG/bild8.jpg", // BILLIE EILISH
-  "1kYPDZKvt1jknL0g37RDnJ": "IMG/bild9.jpg", // SLIPKNOT
+  "3EaJyvMEJZn0SEujFTAfhh": "IMG/bild1.jpg",  // ARIANA GRANDE
+  "3h10Md9vCJztB4LVWq4SZw": "IMG/bild2.jpg",  // THE WEEKND
+  "3dfDAlSCyLOEMjnLYRHDW3": "IMG/bild3.jpg",  // TRAVIS SCOTT
+  "6uOdMg1FwV2X0XzMbsRTqI": "IMG/bild4.jpg",  // SNARKY PUPPY
+  "4Jg8p2V4BRWHUWpMJTmLVb": "IMG/bild5.jpg",  // IMAGINE DRAGONS
+  "3POGTLp40vViwu3PYg4ZQs": "IMG/bild6.jpg",  // THE LUMINEERS
+  "1s4kb4NRwcIxXtH43ZwG2a": "IMG/bild7.jpg",  // DRAKE
+  "2y2H4WReTkLEuIsXb8TuV2": "IMG/bild8.jpg",  // BILLIE EILISH
+  "1kYPDZKvt1jknL0g37RDnJ": "IMG/bild9.jpg",  // SLIPKNOT
   "1m6BKmWSVKkcanEncErKQv": "IMG/bild10.jpg", // METALLICA
 };
 
@@ -28,7 +28,7 @@ const fetchData = async () => {
     }
 
     const data = await response.json();
-    console.log("Data result:", data); // Logga hela API-svaret
+    console.log("Data result:", data);
 
     const days = new Set();
     const stages = new Set();
@@ -57,10 +57,10 @@ const fetchData = async () => {
         return null;
       }
 
-      const dayDescription = dayEntry.fields.description; // Uppdatera för att få dagens beskrivning
-      const stageName = stageEntry.fields.name; // Uppdatera för att få scenens namn
-      const genreName = genreEntry.fields.name; // Uppdatera för att få genrens namn
-      const date = dayEntry.fields.date; // Uppdatera för att få datumet
+      const dayDescription = dayEntry.fields.description;
+      const stageName = stageEntry.fields.name;
+      const genreName = genreEntry.fields.name;
+      const date = dayEntry.fields.date;
 
       days.add(dayDescription);
       stages.add(stageName);
@@ -73,19 +73,16 @@ const fetchData = async () => {
         stage: stageName,
         genre: genreName,
         date: date,
-        image: artistImages[item.sys.id] || "IMG/default.jpg" // Lägg till bildvägen
+        image: artistImages[item.sys.id] || "IMG/default.jpg"
       };
 
-      // Logga artistCard för varje artist
       console.log("Artist Card:", artistCard);
 
       return artistCard;
-    }).filter(card => card !== null); // Filtrera bort null-värden
+    }).filter(card => card !== null);
 
-    // Sortera artistkort i bokstavsordning
     cardWithDetails.sort((a, b) => a.artist.localeCompare(b.artist));
 
-    // Sammanställ filterresultat
     const filterResult = {
       days: Array.from(days),
       stages: Array.from(stages),
@@ -94,7 +91,6 @@ const fetchData = async () => {
 
     console.log("Filter Result:", filterResult);
 
-    // FILTRERING
     const dayFilter = document.getElementById("day-filter");
     const stageFilter = document.getElementById("stage-filter");
     const genreFilter = document.getElementById("genre-filter");
@@ -120,7 +116,6 @@ const fetchData = async () => {
       genreFilter.appendChild(option);
     });
 
-    // Visa alla artistkort initialt
     displayCards(cardWithDetails);
 
   } catch (error) {
@@ -149,9 +144,9 @@ const displayCards = (cards) => {
                 <a href="/Musikfestival copy/ticket.html" class="corner-banner">BOKA BILJETTER</a>
               </div>
             </div>`;
-  }).join(''); // Kombinera HTML-strängarna till en enda sträng
+  }).join('');
 
-  container.innerHTML = cardHTML; // Sätt innerHTML till den kombinerade strängen
+  container.innerHTML = cardHTML; 
 };
 
 const applyFilters = () => {

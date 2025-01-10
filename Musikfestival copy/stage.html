@@ -1,34 +1,27 @@
 <!DOCTYPE html>
-
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information - Musikfestival</title>
+    <title>Scen - Musikfestival</title>
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-    
     <header>
         <h1>Music Festival Stockholm</h1>
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
                 <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/stage.html">Scen</a></li>
                 <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
-                <li><a href="/Musikfestival copy/info.html">Information</a></li>
             </ul>
         </nav>
     </header>
-
-
-
     <main>
         <div class="intro-image">
             <img src="/Musikfestival copy//IMG/festival_map_with_numbers.png">
         </div>
-
         <div class="aside">
             <section class="filter-container">
                 <div class="filters">
@@ -38,14 +31,12 @@
                             <option value="all">Alla</option>
                         </select>
                     </div>
-
                     <div class="day-filter">
                         <label for="day-filter">Dag:</label>
                         <select id="day-filter">
                             <option value="all">Alla</option>
                         </select>
                     </div>
-
                     <div class="stage-filter">
                         <label for="stage-filter">Scen:</label>
                         <select id="stage-filter">
@@ -56,21 +47,17 @@
                 <button id="filter-btn" class="filter-btn">Filtrera</button>
             </section>
         </div>
-        
         <section class="program">
-            <div id="card-container">
-            </div>
+            <div id="card-container"></div>
         </section>
-        
     </main>
-    
     <footer>
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
                 <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/stage.html">Scen</a></li>
                 <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
-                <li><a href="/Musikfestival copy/info.html">Information</a></li>
             </ul>
         </nav>
         <section class="footer-info">
@@ -82,14 +69,12 @@
             </div>
             <img src="/Musikfestival/IMG/logotype--white.svg" alt="Stockholm stad logotyp">
         </section>
-    
         <section class="social-media">
-            <img class="social-icon" src="/Musikfestival copy/IMG/Instagram.jpeg" alt="Instagram logotyp"></img>
-            <img class="social-icon" src="/Musikfestival copy/IMG/facebook.png" alt="Facebook logotyp"></img>
-            <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp"></img>
+            <img class="social-icon" src="/Musikfestival copy/IMG/Instagram.jpeg" alt="Instagram logotyp">
+            <img class="social-icon" src="/Musikfestival copy/IMG/facebook.png" alt="Facebook logotyp">
+            <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp">
         </section>
     </footer>
-
     <script src="stage.js"></script>
 </body>
 </html>

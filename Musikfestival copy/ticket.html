@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
@@ -7,29 +6,24 @@
     <title>Biljetter - Musikfestival</title>
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-
     <header>
         <h1>Music Festival Stockholm</h1>
-
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
                 <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/stage.html">Scen</a></li>
                 <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
-                <li><a href="/Musikfestival copy/info.html">Information</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
         <section class="ticket-form-container">
             <div class="form-cart-wrapper">
                 <form class="ticket-form">
                     <h2>Antal biljetter</h2>
                     <p>Boka dina biljetter till festivalen här. Vi har flera olika biljetter att välja mellan. Välj mellan enstaka dagar eller hela helgen.</p>
-                    
                     <div class="price-info">
                         <h4>Priser:</h4>
                         <p>Dagpass: 500 kr</p>
@@ -37,33 +31,27 @@
                         <p>Helgpass: 1500 kr</p>
                         <p>VIP: 3000 kr</p>
                     </div>
-
                     <h3>Kontaktuppgifter</h3>
                     <div>
                         <p>Namn</p>
                         <input type="text" id="name" name="name" placeholder="Namn" required>
                     </div>
-                
                     <div>
                         <p>E-post</p>
                         <input type="email" id="email" name="email" placeholder="E-post" required>
                     </div>
-
                     <div>
                         <p>Telefonnummer</p>
                         <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
                     </div>
-                    
                     <div>
                         <p>Antal biljetter</p>
                         <input type="number" id="tickets" min="1" name="tickets" placeholder="Antal biljetter" required>
                     </div>
-
                     <div>
                         <p>Antal dagar</p>
                         <input type="number" id="days" min="1" name="days" placeholder="Antal dagar" required>
                     </div>
-
                     <div class="ticket-types">
                         <p>Välj typ av biljett:</p>
                         <select name="ticketType" id="ticketType" required>
@@ -74,7 +62,6 @@
                             <option value="VIP">VIP</option>
                         </select>
                     </div>
-
                     <button class="submit-btn" type="submit">Boka</button>
                 </form>
                 <div class="cart">
@@ -84,14 +71,13 @@
             </div>
         </section>
     </main>
-    
     <footer>
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
                 <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/stage.html">Scen</a></li>
                 <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
-                <li><a href="/Musikfestival copy/info.html">Information</a></li>
             </ul>
         </nav>
         <section class="footer-info">
@@ -103,13 +89,11 @@
             </div>
             <img src="/Musikfestival/IMG/logotype--white.svg" alt="Stockholm stad logotyp">
         </section>
-    
         <section class="social-media">
-            <img class="social-icon" src="/Musikfestival copy/IMG/Instagram.jpeg" alt="Instagram logotyp"></img>
-            <img class="social-icon" src="/Musikfestival copy/IMG/facebook.png" alt="Facebook logotyp"></img>
-            <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp"></img>
+            <img class="social-icon" src="/Musikfestival copy/IMG/Instagram.jpeg" alt="Instagram logotyp">
+            <img class="social-icon" src="/Musikfestival copy/IMG/facebook.png" alt="Facebook logotyp">
+            <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp">
         </section>
     </footer>
-    
-</body>    
+</body>
 </html>
