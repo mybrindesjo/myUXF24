@@ -253,7 +253,7 @@ header, .navbar {
     color: #333333;
 }
 
-.ticket-form button {
+.ticket-form button, #checkout-btn, #cart button {
     padding: 1rem;
     background-color: #007bff;
     color: #ffffff;
@@ -263,7 +263,7 @@ header, .navbar {
     cursor: pointer;
 }
 
-.ticket-form button:hover {
+.ticket-form button:hover, #checkout-btn:hover, #cart button:hover {
     background-color: #0056b3;
 }
 
@@ -564,7 +564,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        flex: 3; /* Allow card container to take more space */
+        flex: 3;
     }
 
     .card {
@@ -573,7 +573,7 @@ footer {
     }
 
     .filters {
-        flex-direction: column; /* Ensure filters are displayed vertically */
+        flex-direction: column;
         gap: 1rem;
     }
 
