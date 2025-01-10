@@ -98,9 +98,9 @@ header, .navbar {
 .filter-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin: 1rem;
     padding: 1rem;
+    padding-top: 1rem;
+    gap: 1rem;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -133,7 +133,7 @@ header, .navbar {
     color: #333333;
 }
 
-.filter-btn {
+.filter-btn, .cart-btn {
     width: 100%;
     padding: 1rem;
     background-color: #3f51b5;
@@ -146,7 +146,7 @@ header, .navbar {
     transition: background-color 0.3s;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, .cart-btn:hover {
     background-color: #303f9f;
 }
 
@@ -188,7 +188,6 @@ header, .navbar {
     z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 1rem;
 }
 
@@ -217,6 +216,7 @@ header, .navbar {
     border-radius: 10px;
     color: #ffffff;
 }
+
 .card-details {
     background-color: #3f51b5;
     padding: 1rem;
@@ -346,7 +346,7 @@ header, .navbar {
 }
 
 a:hover {
-    color: #ffffff;
+    color: #ffea00;
 }
 
 .ticket-form-container {
@@ -610,7 +610,6 @@ footer {
     border-radius: 10px;
 }
 
-
 @media (min-width: 800px) {
     .footer-info {
         flex-direction: row;
@@ -622,12 +621,11 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        flex: 3; /* Allow card container to take more space */
     }
 
     .card {
-        flex: 1 1 300px;
-        max-width: 300px;
+        flex: 1 1 500px;
+        max-width: 500px;
     }
 
     .filters {
@@ -639,8 +637,6 @@ footer {
         display: flex;
         flex-direction: column;
         min-width: 300px;
-        padding: 1rem;
-        margin: 1rem;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -672,11 +668,6 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .card {
-        flex: 1 1 300px;
-        max-width: 300px;
     }
 
     .stage-card {
