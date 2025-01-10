@@ -22,7 +22,7 @@
     <main>
         <section class="ticket-form-container">
             <div class="form-cart-wrapper">
-                <form class="ticket-form">
+                <form class="ticket-form" id="ticketForm">
                     <h2>Antal biljetter</h2>
                     <p>Boka dina biljetter till festivalen här. Vi har flera olika biljetter att välja mellan. Välj mellan enstaka dagar eller hela helgen.</p>
                     <div class="price-info">
@@ -63,11 +63,13 @@
                             <option value="VIP">VIP</option>
                         </select>
                     </div>
-                    <button class="submit-btn" type="submit">Boka</button>
+                    <button class="submit-btn" type="submit">Lägg till i varukorg</button>
                 </form>
-                <div class="cart">
+                <div class="cart" id="cart">
                     <h2>Varukorg</h2>
-                    <p>Inga biljetter i varukorgen.</p>
+                    <div id="cartItems"></div>
+                    <p id="cartTotal">Total: 0 kr</p>
+                    <button id="checkoutBtn">Gå till kassan</button>
                 </div>
             </div>
         </section>
@@ -98,6 +100,6 @@
             <img class="social-icon" src="/myMusikfestival/IMG/Icon/gmail.png" alt="Gmail logotyp"></img>
         </section>
     </footer>
-    </footer>
+    <script src="ticket.js"></script>
 </body>
 </html>

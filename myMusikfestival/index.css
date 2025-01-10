@@ -328,6 +328,20 @@ header, .navbar {
     color: #666666;
 }
 
+.cart button {
+    padding: 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cart button:hover {
+    background-color: #0056b3;
+}
+
 a:hover {
     color: #ffffff;
 }
