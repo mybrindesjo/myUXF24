@@ -23,7 +23,7 @@ h1 {
 
 label {
     font-size: 1rem;
-    color: #ff4081;
+    color: #ffffff;
 }
 
 h2 {
@@ -57,6 +57,25 @@ header, .navbar {
     justify-content: space-around;
     color: #ffffff;
     list-style: none;
+}
+
+.intro {
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+    background-image: url('/myMusikfestival/IMG/Festival/background.webp');
+}
+
+.info {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.info p {
+    color: #000000;
+    text-align: center;
 }
 
 .filter-container {
@@ -515,6 +534,7 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        flex: 3; /* Allow card container to take more space */
     }
 
     .card {
@@ -523,29 +543,26 @@ footer {
     }
 
     .filters {
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column; /* Ensure filters are displayed vertically */
+        gap: 1rem;
     }
 
     .aside {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        min-width: 400px;
-        max-height: auto;
+        min-width: 300px;
         padding: 1rem;
         margin: 1rem;
-        background-image: url('/myMusikfestival/IMG/Festival/background.webp');
         background-size: cover;
         background-position: center;
         border-radius: 10px;
+        flex: 1;
     }
 
     .body-wrap {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
     }
 
@@ -562,6 +579,5 @@ footer {
     .intro-image {
         display: none;
     }
-    
 }
 

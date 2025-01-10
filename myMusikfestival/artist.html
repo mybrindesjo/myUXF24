@@ -23,32 +23,41 @@
             <img src="/myMusikfestival/IMG/Festival/background.webp" alt="Musikfestival Introduktionsbild">
         </div>
 
-        <div class="aside">
-            <section class="filter-container">
-                <h2 class="filters">Filtrera</h2>
-                <div class="filters">
-                    <div class="genre-filter">
-                        <select id="genre-filter">
-                            <option value="all">Genre</option>
-                        </select>
-                    </div>
-                    <div class="day-filter">
-                        <select id="day-filter">
-                            <option value="all">Dag</option>
-                        </select>
-                    </div>
-                    <div class="stage-filter">
-                        <select id="stage-filter">
-                            <option value="all">Scen</option>
-                        </select>
-                    </div>
-                </div>
-                <button id="filter-btn" class="filter-btn">Filtrera</button>
-            </section>
+        <div class="intro">
+            <div class="info">
+            <h1>ARTISTER</h1>
+            <p>Välkommen! Boka biljetter enkelt – filtrera efter dag, genre eller scen och hitta dina favoriter! 🎶</p>
+            </div>
         </div>
-        <section class="program">
-            <div id="card-container"></div>
-        </section>
+
+        <div class="body-wrap">
+            <div class="aside">
+                <section class="filter-container">
+                    <h2 class="filters">Filtrera</h2>
+                    <div class="filters">
+                        <div class="genre-filter">
+                            <select id="genre-filter">
+                                <option value="all">Genre</option>
+                            </select>
+                        </div>
+                        <div class="day-filter">
+                            <select id="day-filter">
+                                <option value="all">Dag</option>
+                            </select>
+                        </div>
+                        <div class="stage-filter">
+                            <select id="stage-filter">
+                                <option value="all">Scen</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="filter-btn" class="filter-btn">Filtrera</button>
+                </section>
+            </div>
+            <section class="program">
+                <div id="card-container"></div>
+            </section>
+        </div> 
     </main>
     <footer>
         <nav class="navbar">
@@ -74,7 +83,6 @@
             <img class="social-icon" src="/myMusikfestival/IMG/Icon/facebook.png" alt="Facebook logotyp"></img>
             <img class="social-icon" src="/myMusikfestival/IMG/Icon/gmail.png" alt="Gmail logotyp"></img>
         </section>
-    </footer>
     </footer>
     <script src="artist.js"></script>
 </body>
