@@ -117,12 +117,17 @@ const displayCards = (cards) => {
 
   const cardHTML = cards.map((card) => {
     const artistsHTML = card.artists.map(artist => {
-      return `<div class="artist-info">
-                <h4>Artist: ${artist.artist}</h4>
-                <p>Dag: ${artist.day}</p>
-                <p>Genre: ${artist.genre}</p>
-                <p>Beskrivning: ${artist.description}</p>
-                <img src="${artist.image}" alt="${artist.artist}">
+      return `<div class="card" style="background-image: url('${artist.image}');">
+                <div class="card-content">
+                  <h2>${artist.artist}</h2>
+                  <p>${artist.description}</p>
+                  <div class="card-details">
+                    <p><strong>Genre: </strong>${artist.genre}</p>
+                    <p><strong>Scen: </strong>${card.stage}</p>
+                    <p><strong>Dag: </strong>${artist.day}</p>
+                    <p><strong>Datum: </strong>${artist.date}</p>
+                  </div>
+                </div>
               </div>`;
     }).join('');
 
@@ -130,7 +135,9 @@ const displayCards = (cards) => {
               <div class="card-content">
                 <h2>${card.stage}</h2>
                 <h3>Area: ${card.area}</h3>
-                ${artistsHTML}
+                <div class="artists-wrapper">
+                  ${artistsHTML}
+                </div>
               </div>
             </div>`;
   }).join('');
