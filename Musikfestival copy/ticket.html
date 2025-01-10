@@ -7,85 +7,89 @@
     <title>Biljetter - Musikfestival</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<header>
-    <h1>Music Festival Stockholm</h1>
 
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="/Musikfestival copy/index.html">Hem</a></li>
-            <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
-            <li><a href="/Musikfestival copy/info.html">Information</a></li>
-        </ul>
-    </nav>
-</header>
 <body>
 
-    <section class="ticket-form-container">
-        <div class="form-cart-wrapper">
-            <form class="ticket-form">
-                <h2>Antal biljetter</h2>
-                <p>Boka dina biljetter till festivalen här. Vi har flera olika biljetter att välja mellan. Välj mellan enstaka dagar eller hela helgen.</p>
+    <header>
+        <h1>Music Festival Stockholm</h1>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
+                <li><a href="/Musikfestival copy/info.html">Information</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ticket-form-container">
+            <div class="form-cart-wrapper">
+                <form class="ticket-form">
+                    <h2>Antal biljetter</h2>
+                    <p>Boka dina biljetter till festivalen här. Vi har flera olika biljetter att välja mellan. Välj mellan enstaka dagar eller hela helgen.</p>
+                    
+                    <div class="price-info">
+                        <h4>Priser:</h4>
+                        <p>Dagpass: 500 kr</p>
+                        <p>Kvällspass: 750 kr</p>
+                        <p>Helgpass: 1500 kr</p>
+                        <p>VIP: 3000 kr</p>
+                    </div>
+
+                    <h3>Kontaktuppgifter</h3>
+                    <div>
+                        <p>Namn</p>
+                        <input type="text" id="name" name="name" placeholder="Namn" required>
+                    </div>
                 
-                <div class="price-info">
-                    <h4>Priser:</h4>
-                    <p>Dagpass: 500 kr</p>
-                    <p>Kvällspass: 750 kr</p>
-                    <p>Helgpass: 1500 kr</p>
-                    <p>VIP: 3000 kr</p>
-                </div>
+                    <div>
+                        <p>E-post</p>
+                        <input type="email" id="email" name="email" placeholder="E-post" required>
+                    </div>
 
-                <h3>Kontaktuppgifter</h3>
-                <div>
-                    <p>Namn</p>
-                    <input type="text" id="name" name="name" placeholder="Namn" required>
-                </div>
-               
-                <div>
-                    <p>E-post</p>
-                    <input type="email" id="email" name="email" placeholder="E-post" required>
-                </div>
+                    <div>
+                        <p>Telefonnummer</p>
+                        <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
+                    </div>
+                    
+                    <div>
+                        <p>Antal biljetter</p>
+                        <input type="number" id="tickets" min="1" name="tickets" placeholder="Antal biljetter" required>
+                    </div>
 
-                <div>
-                    <p>Telefonnummer</p>
-                    <input type="tel" id="phone" name="phone" placeholder="Telefonnummer" required>
-                </div>
-                
-                <div>
-                    <p>Antal biljetter</p>
-                    <input type="number" id="tickets" min="1" name="tickets" placeholder="Antal biljetter" required>
-                </div>
+                    <div>
+                        <p>Antal dagar</p>
+                        <input type="number" id="days" min="1" name="days" placeholder="Antal dagar" required>
+                    </div>
 
-                <div>
-                    <p>Antal dagar</p>
-                    <input type="number" id="days" min="1" name="days" placeholder="Antal dagar" required>
-                </div>
+                    <div class="ticket-types">
+                        <p>Välj typ av biljett:</p>
+                        <select name="ticketType" id="ticketType" required>
+                            <option value="" disabled selected>Välj typ av biljett</option>
+                            <option value="Dagpass">Dagpass</option>
+                            <option value="Kvällspass">Kvällspass</option>
+                            <option value="Helgpass">Helgpass</option>
+                            <option value="VIP">VIP</option>
+                        </select>
+                    </div>
 
-                <div class="ticket-types">
-                    <p>Välj typ av biljett:</p>
-                    <select name="ticketType" id="ticketType" required>
-                        <option value="" disabled selected>Välj typ av biljett</option>
-                        <option value="Dagpass">Dagpass</option>
-                        <option value="Kvällspass">Kvällspass</option>
-                        <option value="Helgpass">Helgpass</option>
-                        <option value="VIP">VIP</option>
-                    </select>
+                    <button class="submit-btn" type="submit">Boka</button>
+                </form>
+                <div class="cart">
+                    <h2>Varukorg</h2>
+                    <p>Inga biljetter i varukorgen.</p>
                 </div>
-
-                <button class="submit-btn" type="submit">Boka</button>
-            </form>
-            <div class="cart">
-                <h2>Varukorg</h2>
-                <p>Inga biljetter i varukorgen.</p>
             </div>
-        </div>
-    </section>
-    
-</body>
+        </section>
+    </main>
     
     <footer>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="/Musikfestival copy/index.html">Hem</a></li>
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
                 <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
                 <li><a href="/Musikfestival copy/info.html">Information</a></li>
             </ul>
@@ -106,4 +110,6 @@
             <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp"></img>
         </section>
     </footer>
+    
+</body>    
 </html>

@@ -7,63 +7,68 @@
     <title>Information - Musikfestival</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<header>
-    <h1>Music Festival Stockholm</h1>
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="/Musikfestival copy/index.html">Hem</a></li>
-            <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
-            <li><a href="/Musikfestival copy/info.html">Information</a></li>
-        </ul>
-    </nav>
-</header>
+
 <body>
-
-
     
-    <div class="intro-image">
-        <img src="/Musikfestival copy//IMG/festival_map_with_numbers.png">
-    </div>
+    <header>
+        <h1>Music Festival Stockholm</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
+                <li><a href="/Musikfestival copy/info.html">Information</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="aside">
-        <section class="filter-container">
-            <div class="filters">
-                <div class="genre-filter">
-                    <label for="genre-filter">Genre:</label>
-                    <select id="genre-filter">
-                        <option value="all">Alla</option>
-                    </select>
-                </div>
 
-                <div class="day-filter">
-                    <label for="day-filter">Dag:</label>
-                    <select id="day-filter">
-                        <option value="all">Alla</option>
-                    </select>
-                </div>
 
-                <div class="stage-filter">
-                    <label for="stage-filter">Scen:</label>
-                    <select id="stage-filter">
-                        <option value="all">Alla</option>
-                    </select>
-                </div>
-            </div>
-            <button id="filter-btn" class="filter-btn">Filtrera</button>
-        </section>
-    </div>
-    
-    <section class="program">
-        <div id="card-container">
+    <main>
+        <div class="intro-image">
+            <img src="/Musikfestival copy//IMG/festival_map_with_numbers.png">
         </div>
-    </section>
-    
-    <script src="stage.js"></script>
 
+        <div class="aside">
+            <section class="filter-container">
+                <div class="filters">
+                    <div class="genre-filter">
+                        <label for="genre-filter">Genre:</label>
+                        <select id="genre-filter">
+                            <option value="all">Alla</option>
+                        </select>
+                    </div>
+
+                    <div class="day-filter">
+                        <label for="day-filter">Dag:</label>
+                        <select id="day-filter">
+                            <option value="all">Alla</option>
+                        </select>
+                    </div>
+
+                    <div class="stage-filter">
+                        <label for="stage-filter">Scen:</label>
+                        <select id="stage-filter">
+                            <option value="all">Alla</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="filter-btn" class="filter-btn">Filtrera</button>
+            </section>
+        </div>
+        
+        <section class="program">
+            <div id="card-container">
+            </div>
+        </section>
+        
+    </main>
+    
     <footer>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="/Musikfestival copy/index.html">Hem</a></li>
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
                 <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
                 <li><a href="/Musikfestival copy/info.html">Information</a></li>
             </ul>
@@ -84,5 +89,7 @@
             <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp"></img>
         </section>
     </footer>
+
+    <script src="stage.js"></script>
 </body>
 </html>
