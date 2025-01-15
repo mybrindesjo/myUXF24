@@ -319,6 +319,11 @@ img {
     cursor: pointer;
 }
 
+.show-more-btn:hover {
+    background: #092901;
+}
+
+
 .fullscreen-overlay {
     display: none;
     position: fixed;
