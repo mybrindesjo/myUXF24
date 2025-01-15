@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/myportfolio/img/Skärmavbild 2025-01-14 kl. 16.11.57.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <main>
@@ -45,7 +46,7 @@
             </ul>
         </nav>
 
-        <section class="info-card">
+        <section class="intro-card">
             <h1>Vem är jag?</h1>
             <h2>UX/UI-designerstudent med bred erfarenhet och starkt driv!</h2>       
             <p>Jag heter My Brindesjö, 20 år gammal och bor i Solna. 
@@ -59,39 +60,51 @@
             <h2>Erfarenheter</h2>
             <div class="info-card">
                 <h3>Sportkörning på elitnivå</h3>
-                <p>Under 2023 hade jag förmånen att vara lärling i sportkörningslandslaget. 
+                <button class="toggle-btn">Visa mer</button>
+                <div class="description">
+                    <p>Under 2023 hade jag förmånen att vara lärling i sportkörningslandslaget. 
                     I rollen som hästskötare och groom deltog jag i internationella tävlingar 
                     och världsmästerskap. Denna tid lärde mig att arbeta under press, vara 
                     flexibel och samarbeta i högpresterande team.</p>
+                </div>
             </div>
 
             <div class="info-card">
                 <h3>Ledarskap och engagemang</h3>
-                <p>Mitt ledarskap har utvecklats genom min roll som hjälpledare för en scoutgrupp, 
+                <button class="toggle-btn">Visa mer</button>
+                <div class="description">
+                    <p>Mitt ledarskap har utvecklats genom min roll som hjälpledare för en scoutgrupp, 
                     där jag också genomgått flera ledarskapsutbildningar. Jag har dessutom varit 
                     engagerad i ungdomssektionen på Mariefreds Ridklubb, där jag fick ytterligare 
                     träning i att leda och inspirera andra.</p>
+                </div>
             </div>
 
             <div class="info-card">
                 <h3>Erfarenhet inom hästnäringen</h3>
-                <p>Jag har praktiserat och arbetat i flera stall, alltid med goda resultat och höga 
+                <button class="toggle-btn">Visa mer</button>
+                <div class="description">
+                    <p>Jag har praktiserat och arbetat i flera stall, alltid med goda resultat och höga 
                     krav på kvalitet. Dessa erfarenheter har stärkt min organisationsförmåga och arbetsmoral.</p>
+                </div>
             </div>
         </section>
         <section class="info-container">
             <h2>Arbetslivserfarenhet</h2>
             <div class="info-card">
-                <div class="info-img">
-                    <img src="/myportfolio/img/skansen_logo.jpeg" alt="skansen_logo">
+                <img src="/myportfolio/img/skansen_logo.jpeg" alt="skansen_logo">
+                    
                 <div class="info-text">
                     <h3>Stiftelsen Skansen</h3>
                     <p>Lokalvårdare</p>
                     <p>Stiftelsen Skansen</p>
                     <p>okt. 2024–nu</p>
+                    <button class="toggle-btn">Visa mer</button>
+
                 </div>
-                </div>
+                <div class="description">
                     <p>Städning av Skansens kulturhistoriska miljöer och övriga byggnader, samt övriga förekommande arbetsuppgifter på Lokalvårdsenheten.</p>
+                </div>
             </div>
 
             <div class="info-card">
@@ -99,7 +112,10 @@
                 <p>Vårdbiträde</p>
                 <p>Strängnäs kommun</p>
                 <p>apr. 2024–aug. 2024</p>
-                <p>Vårdbiträde inom äldreomsorgen.</p>
+                <button class="toggle-btn">Visa mer</button>
+                <div class="description">
+                    <p>Vårdbiträde inom äldreomsorgen.</p>
+                </div>
             </div>
 
             <div class="info-card">
@@ -107,7 +123,10 @@
                 <p>Lokalvårdare</p>
                 <p>Stiftelsen Skansen</p>
                 <p>nov. 2023–maj 2024</p>
-                <p>Städning av Skansens kulturhistoriska miljöer och övriga byggnader, samt övriga förekommande arbetsuppgifter på Lokalvårdsenheten.</p>
+                <button class="toggle-btn">Visa mer</button>
+                <div class="description">
+                    <p>Städning av Skansens kulturhistoriska miljöer och övriga byggnader, samt övriga förekommande arbetsuppgifter på Lokalvårdsenheten.</p>
+                </div>
             </div>
 
             <div class="info-card">
@@ -115,7 +134,10 @@
                 <p>Hästskötare</p>
                 <p>Bollerups Lantbruksinstitut och Naturbruksgymnasium</p>
                 <p>apr. 2022–apr. 2023</p>
-                <p>Sedvanlig stallskötsel.</p>
+                <button class="toggle-btn">Visa mer</button>
+                <div class="description">
+                    <p>Sedvanlig stallskötsel.</p>
+                </div>
             </div>
 
             <div class="info-card">
@@ -123,7 +145,10 @@
                 <p>Hästskötare</p>
                 <p>Christoffer Eriksson AB</p>
                 <p>mars 2022–mars 2022</p>
-                <p>Sedvanlig stallskötsel.</p>
+                <button class="toggle-btn">Visa mer</button>
+                <div class="description">
+                    <p>Sedvanlig stallskötsel.</p>
+                </div>
             </div>
         </section>
     </main>
