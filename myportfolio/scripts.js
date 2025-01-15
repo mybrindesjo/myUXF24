@@ -33,4 +33,20 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    const projectImages = document.querySelectorAll(".project-img");
+    const fullscreenOverlay = document.querySelector(".fullscreen-overlay");
+    const fullscreenImage = fullscreenOverlay.querySelector("img");
+    const closeBtn = fullscreenOverlay.querySelector(".close-btn");
+
+    projectImages.forEach(img => {
+        img.addEventListener("click", function() {
+            fullscreenImage.src = this.src;
+            fullscreenOverlay.style.display = "flex";
+        });
+    });
+
+    closeBtn.addEventListener("click", function() {
+        fullscreenOverlay.style.display = "none";
+    });
 });
