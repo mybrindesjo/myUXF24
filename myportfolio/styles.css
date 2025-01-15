@@ -47,7 +47,7 @@ main {
 }
 
 .nav-link:hover {
-    background: #ff4081;
+    background: #ff6d40;
 }
 
 
@@ -124,10 +124,21 @@ main {
     gap: 2rem;
 }
 
+.experience-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    max-width: 1200px;
+}
+
 .experience-card, .intro-card {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
 }
 
 .info-card {
@@ -136,7 +147,7 @@ main {
     gap: 1rem;
 }
 
-.info-card, .experience-card, .intro-card {
+.info-card, .intro-card {
     background: rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 10px;
@@ -164,7 +175,7 @@ main {
 }
 
 .info-card h3, .experience-card h3 {
-    color: #208402;
+    color: #ff4d00;
 }
 
 .info-card p {
@@ -267,4 +278,34 @@ img {
     gap: 1rem;
 }
 
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
 
+.project-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

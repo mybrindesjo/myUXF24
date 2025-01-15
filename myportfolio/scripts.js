@@ -18,4 +18,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    const showMoreButtons = document.querySelectorAll(".show-more-btn");
+
+    showMoreButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const moreImages = this.previousElementSibling;
+            if (moreImages.style.display === "none" || moreImages.style.display === "") {
+                moreImages.style.display = "block";
+                this.textContent = "Visa mindre";
+            } else {
+                moreImages.style.display = "none";
+                this.textContent = "Visa mer";
+            }
+        });
+    });
 });
