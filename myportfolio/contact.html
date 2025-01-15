@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Brindesjö</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/myportfolio/img/Skärmavbild 2025-01-14 kl. 16.11.57.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section class="container">
+            <div class="profile-picture">
+                <img src="/myportfolio/img/Skärmavbild 2025-01-14 kl. 16.11.57.png" alt="Profile Picture">
+            </div>
+            <div class="about-intro">
+                <h1 class="name">My Brindesjö</h1>
+                <h3 class="username">@mybrindesjo</h3>
+                <p>UX/UI-designer med frontendkompetens</p>
+                <p>Stockholm, Sverige</p>
+            </div>
+            <div class="social-links">
+                <a href="mailto:my.brindesjo@gmail.com">
+                    <img src="/myportfolio/icon/gmail.png" alt="Figma" class="social-img">
+                </a>
+                <a href="https://github.com/mybrindesjo/myUXF24" target="_blank">
+                    <img src="/myportfolio/img/github.png" alt="Github" class="social-img">
+                </a>
+                <a href="https://www.linkedin.com/in/mybrindesjo/" target="_blank">
+                    <img src="/myportfolio/img/linkedin.png" alt="LinkedIn" class="social-img">
+                </a>
+            </div>
+        </section>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a class="nav-link" href="home.html">Home</a></li>
+                <li><a class="nav-link" class="activ-page" href="about.html">About</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="form">
+            <h2>Kontakta mig</h2>
+            <form action="contact.php" method="POST">
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Skicka</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
+    </footer>
+    <div class="fullscreen-overlay">
+        <button class="close-btn">Stäng</button>
+        <img src="" alt="Fullscreen Image">
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
