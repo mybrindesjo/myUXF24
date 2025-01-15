@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Brindesjö</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/myportfolio/img/Skärmavbild 2025-01-14 kl. 16.11.57.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a class="nav-link" href="home.html">Home</a></li>
-                <li><a class="nav-link" href="about.html">About</a></li>
-                <li><a class="nav-link" href="projects.html">Projects</a></li>
-                <li><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
     </header>
     <main>
         <section class="container">
             <div class="profile-picture">
                 <img src="/myportfolio/img/Skärmavbild 2025-01-14 kl. 16.11.57.png" alt="Profile Picture">
             </div>
-            <div class="info-intro">
+            <div class="about-intro">
                 <h1 class="name">My Brindesjö</h1>
                 <h3 class="username">@mybrindesjo</h3>
                 <p>UX/UI-designer med frontendkompetens</p>
@@ -43,7 +37,18 @@
                 </a>
             </div>
         </section>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a class="nav-link" href="home.html">Home</a></li>
+                <li><a class="nav-link" class="activ-page" href="about.html">About</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
         <section class="intro-card">
+            <img src="" alt="me-picture">
             <h1>Vem är jag?</h1>
             <h2>UX/UI-designerstudent med bred erfarenhet och starkt driv!</h2>       
             <p>Jag heter My Brindesjö, 20 år gammal och bor i Solna. 
@@ -55,9 +60,8 @@
        
         <section class="info-container">
             <h2>Erfarenheter</h2>
-            <div class="info-card">
+            <div class="experience-card">
                 <h3>Sportkörning på elitnivå</h3>
-                <button class="toggle-btn">Visa mer</button>
                 <div class="description">
                     <p>Under 2023 hade jag förmånen att vara lärling i sportkörningslandslaget. 
                     I rollen som hästskötare och groom deltog jag i internationella tävlingar 
@@ -66,9 +70,8 @@
                 </div>
             </div>
 
-            <div class="info-card">
+            <div class="experience-card">
                 <h3>Ledarskap och engagemang</h3>
-                <button class="toggle-btn">Visa mer</button>
                 <div class="description">
                     <p>Mitt ledarskap har utvecklats genom min roll som hjälpledare för en scoutgrupp, 
                     där jag också genomgått flera ledarskapsutbildningar. Jag har dessutom varit 
@@ -76,9 +79,8 @@
                     träning i att leda och inspirera andra.</p>
                 </div>
             </div>
-            <div class="info-card">
+            <div class="experience-card">
                 <h3>Erfarenhet inom hästnäringen</h3>
-                <button class="toggle-btn">Visa mer</button>
                 <div class="description">
                     <p>Jag har praktiserat och arbetat i flera stall, alltid med goda resultat och höga 
                     krav på kvalitet. Dessa erfarenheter har stärkt min organisationsförmåga och arbetsmoral.</p>
@@ -89,56 +91,32 @@
         <section class="info-container">
             <h2>Arbetslivserfarenhet</h2>
             <article class="info-card">
-                <img src="/myportfolio/img/skansen_logo.jpeg" alt="skansen_logo"> 
-                <div class="info-text">
-                    <h3>Stiftelsen Skansen</h3>
-                    <p>Lokalvårdare</p>
-                    <p>okt. 2024 – nu</p>
-                    <button class="toggle-btn">Visa mer</button>
-                    <div class="description">
-                        <p>Städning av Skansens kulturhistoriska miljöer och övriga byggnader, samt övriga förekommande arbetsuppgifter på Lokalvårdsenheten.</p>
-                    </div>
-                </div>
+                        <img src="/myportfolio/img/skansen_logo.jpeg" alt="skansen_logo"> 
+                        <div class="info-text">
+                            <h3>Skansen</h3>
+                            <p>Lokalvårdare</p>
+                            <p>nov. 2023 – nu</p>
+                        </div>
             </article>
 
             <article class="info-card">
-                <img src="/myportfolio/img/" alt="strangnaskommun_logo"> 
-                <div class="info-text">
-                    <h3>Strängnäs kommun</h3>
-                    <p>Vårdbiträde</p>
-                    <p>apr. 2024 - aug. 2024</p>
-                    <button class="toggle-btn">Visa mer</button>
-                    <div class="description">
-                        <p>Städning av Skansens kulturhistoriska miljöer och övriga byggnader, samt övriga förekommande arbetsuppgifter på Lokalvårdsenheten.</p>
+                <img src="/myportfolio/img/strangnaskommun.png" alt="strangnaskommun_logo"> 
+                    <div class="info-text">
+                        <h3>Strängnäs kommun</h3>
+                        <p>Vårdbiträde</p>
+                        <p>apr. 2024 - aug. 2024</p>
                     </div>
-                </div>
             </article>
 
             <article class="info-card">
-                <img src="/myportfolio/img/bollerups_logo.jpeg" alt="bollerups_logo"> 
-                <div class="info-text">
-                    <h3>Bollerups Lantbruksinstitut och Naturbruksgymnasium</h3>
+                <img src="/myportfolio/img/bollerup.png" alt="bollerups_logo"> 
+                <div class="info-text">                
+                    <h3>Bollerup</h3>
                     <p>Hästskötare</p>
                     <p>apr. 2022 - apr. 2023</p>
-                    <button class="toggle-btn">Visa mer</button>
-                    <div class="description">
-                        <p>Sedvanlig stallskötsel.</p>
-                    </div>
                 </div>
             </article>
 
-                <article class="info-card">
-                    <img src="/myportfolio/img/bollerups_logo.jpeg" alt="bollerups_logo"> 
-                    <div class="info-text">
-                        <h3>Christoffer Eriksson AB</h3>
-                        <p>Hästskötare</p>
-                        <p>apr. 2023 - apr. 2023</p>
-                        <button class="toggle-btn">Visa mer</button>
-                        <div class="description">
-                            <p>Sedvanlig stallskötsel.</p>
-                        </div>
-                    </div>
-                </article>
         </section>
 
     </main>
