@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff4081, #ffea00);
+    background: url('/myportfolio/img/bakgrund.jpg') no-repeat center center/cover;
+    /*background: linear-gradient(135deg, #ff4081, #ffea00);*/
     color: white;
     display: flex;
     flex-direction: column;
@@ -117,7 +118,10 @@ main {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
-    max-width: 1200px; /* Ensure the container does not exceed the viewport width */
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .experience-card, .intro-card {
@@ -160,7 +164,7 @@ main {
 }
 
 .info-card h3, .experience-card h3 {
-    color: #ffea00;
+    color: #208402;
 }
 
 .info-card p {
