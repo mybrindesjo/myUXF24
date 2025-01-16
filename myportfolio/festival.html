@@ -10,8 +10,7 @@
 <body>
     <header>
 
-    </header>
-    <main>
+
         <section class="container">
             <div class="profile-picture">
                 <img src="/myportfolio/img/Skärmavbild 2025-01-14 kl. 16.11.57.png" alt="Profile Picture" width="150" height="150">
@@ -43,25 +42,11 @@
                 <li><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </nav>
+    </header>
+    <main>
 
-        <section class="form">
-            <h2>Kontakta mig</h2>
-            <p>Tack för att du besöker min portfolio! Jag är alltid öppen för nya möjligheter, samarbeten och diskussioner inom UX/UI-design och frontendutveckling. Tveka inte att höra av dig om du har några frågor eller funderingar.</p>
-            <p>Du kan nå mig via:</p>
-            <div class="social-links">
-                <a href="mailto:my.brindesjo@gmail.com">
-                    <img src="/myportfolio/icon/gmail.png" alt="Figma" class="social-img">
-                </a>
-                <a href="https://github.com/mybrindesjo/myUXF24" target="_blank">
-                    <img src="/myportfolio/img/github.png" alt="Github" class="social-img">
-                </a>
-                <a href="https://www.linkedin.com/in/mybrindesjo/" target="_blank">
-                    <img src="/myportfolio/img/linkedin.png" alt="LinkedIn" class="social-img">
-                </a>
-            </div>
 
-        </section>
-        
+
     </main>
     <footer>
         <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
@@ -71,5 +56,19 @@
         <img src="" alt="Fullscreen Image">
     </div>
     <script src="scripts.js"></script>
+    <script>
+        document.querySelectorAll('.toggle-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                const details = button.parentElement.nextElementSibling;
+                if (details.style.display === 'none' || details.style.display === '') {
+                    details.style.display = 'block';
+                    button.textContent = '-';
+                } else {
+                    details.style.display = 'none';
+                    button.textContent = '+';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
