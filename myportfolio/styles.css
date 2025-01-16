@@ -392,3 +392,55 @@ img {
 .form button:hover, form button:hover {
     background: #092901;
 }
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-details img {
+    margin-bottom: 1rem;
+}
+
+.project-details p {
+    margin-bottom: 1rem;
+}
+
+.project-btn {
+    background: #ff4d00;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 1rem;
+
+}
+
+.project-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.project-btn:hover {
+    background: #092901;
+}
