@@ -380,7 +380,7 @@ footer {
 .row {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 20rem;
     justify-content: space-between;
     padding: 1rem;
 
@@ -537,6 +537,14 @@ footer {
     .project-container img {
         width: auto;
         height: 300px;
+    }
+
+    .media-wrap {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+
     }
 
 
