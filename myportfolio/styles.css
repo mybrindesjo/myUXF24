@@ -19,7 +19,7 @@ body {
     overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
-main {
+main, header {
     width: 100%;
     max-width: 800px;
     display: flex;
@@ -273,17 +273,24 @@ footer {
     max-width: 1200px; /* Ensure the container does not exceed the viewport width */
 }
 
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
 
 .about-intro {
     display: flex;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
+}
+
+.intro-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10000px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 10000px;
 }
 
 .project-container {
@@ -487,4 +494,50 @@ img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@media (min-width: 1024px) {
+
+    main {
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+
+    .media-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        max-width: 1200px;
+    }
+
+    .intro-card {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .media-column {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .intro-card img {
+        width: 400px;
+        height: 400px;
+        border-radius: 10px;
+    }
+
 }
