@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: url('/myportfolio/img/bakgrund.jpg') no-repeat center center/cover;
     /*background: linear-gradient(135deg, #ff4081, #ffea00);*/
     color: white;
@@ -49,7 +51,6 @@ main {
 .nav-link:hover {
     background: #ff6d40;
 }
-
 
 .container {
     background: rgba(0, 0, 0, 0.8);
@@ -125,7 +126,7 @@ main {
 }
 
 .experience-card {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(48, 48, 48, 0.8);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
@@ -147,7 +148,18 @@ main {
     gap: 1rem;
 }
 
-.info-card, .intro-card {
+.intro-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    align-items: center;
+
+}
+.info-card {
     background: rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 10px;
@@ -181,8 +193,6 @@ main {
 .info-card p {
     color: #ffffff;
 }
-
-
 
 .toggle-btn {
     background: #ff4081;
@@ -263,8 +273,6 @@ footer {
     max-width: 1200px; /* Ensure the container does not exceed the viewport width */
 }
 
-
-
 img {
     width: 100px;
     height: 100px;
@@ -302,6 +310,14 @@ img {
     gap: 2rem;
 }
 
+.project-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .project-img {
     width: 100%;
     height: auto;
@@ -322,7 +338,6 @@ img {
 .show-more-btn:hover {
     background: #092901;
 }
-
 
 .fullscreen-overlay {
     display: none;
@@ -443,4 +458,33 @@ img {
 
 .project-btn:hover {
     background: #092901;
+}
+
+.project-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 77, 0, 0.5);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    list-style: none;
+}
+
+.skills li {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
