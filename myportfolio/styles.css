@@ -29,7 +29,6 @@ main, header {
     gap: 2rem;
 }
 
-
 .navbar {
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -63,22 +62,23 @@ main, header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
 }
 
 .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
+    width: 250px;
+    height: 250px;
     margin: 0 auto 1rem;
-    border: 5px solid #ff4081;
-    box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
     align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-picture img {
     width: 100%;
     height: auto;
+    border-radius: 100%;
 }
 
 .info {
@@ -121,7 +121,6 @@ social-img:hover {
     transform: scale(1.1);
 }
 
-
 .intro, .info-container {
     background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
@@ -147,7 +146,6 @@ social-img:hover {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
 }
 
 .info-card {
@@ -164,8 +162,8 @@ social-img:hover {
     margin-bottom: 2rem;
     max-width: 1200px;
     align-items: center;
-
 }
+
 .info-card {
     background: rgba(0, 0, 0, 0.1);
     padding: 1rem;
@@ -236,7 +234,6 @@ footer {
     max-width: 1200px; /* Ensure the container does not exceed the viewport width */
 }
 
-
 .about-intro {
     display: flex;
     flex-direction: column;
@@ -260,7 +257,6 @@ footer {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    
 }
 
 .project-card {
@@ -347,7 +343,6 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-
 .form input, .form textarea, form input, form textarea {
     padding: 0.5rem;
     border: none;
@@ -374,7 +369,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
 }
 
 .row {
@@ -383,7 +377,6 @@ footer {
     gap: 20rem;
     justify-content: space-between;
     padding: 1rem;
-
 }
 
 .project-details {
@@ -410,7 +403,6 @@ footer {
     cursor: pointer;
     transition: background 0.3s;
     margin-bottom: 1rem;
-
 }
 
 .project-btn a {
@@ -421,7 +413,6 @@ footer {
 .project-btn:hover {
     background: #092901;
 }
-
 
 .skills-container {
     display: flex;
@@ -502,8 +493,6 @@ footer {
         transform: scale(1.1);
     }
 
-
-
     .project {
         display: flex;
         flex-direction: column;
@@ -560,8 +549,10 @@ footer {
         gap: 2rem;
         padding-right: 30rem;
         text-align: left;
+        align-items: flex-start;
 
     }
+
 
 
 
