@@ -53,8 +53,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+const navLinksContainer = document.querySelector('.nav-links');
 
 mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
+});
+
+
+// Get all the links in the navbar
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Get the current URL path
+const currentPath = window.location.pathname.split('/').pop();
+
+// Loop through links and add 'active' class to the current page
+navLinks.forEach(link => {
+  if (link.getAttribute('href') === currentPath) {
+    link.classList.add('active');
+  }
 });
