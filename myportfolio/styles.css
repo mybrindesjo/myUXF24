@@ -464,6 +464,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-items: center;
     padding: 10px 20px;
     background-color: #333;
     color: white;
@@ -473,6 +474,7 @@ footer {
     list-style: none;
     display: flex;
     gap: 20px;
+
 }
 
 .nav-link {
@@ -499,8 +501,7 @@ footer {
     margin: 3px 0;
 }
 
-/* Responsiv design */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .menu-toggle {
         display: flex;
     }
@@ -509,11 +510,12 @@ footer {
         display: none;
         flex-direction: column;
         background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 150px;
-        padding: 10px;
+        top: 9rem;
+        left: 35px;
+        width: 30px;
+        padding: 5rem;
+        text-align: left;
+        border-radius: 0 0 10px 10px;
     }
 
     .nav-links.active {
@@ -524,7 +526,6 @@ footer {
         padding: 10px 0;
     }
 }
-
 
 @media (min-width: 1024px) {
 
