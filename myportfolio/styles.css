@@ -8,14 +8,14 @@
 
 body {
     font-family: 'Fira Code', monospace;
-    background: url('/myportfolio/img/bakgrund.jpg') no-repeat center center/cover;
+    background: url('/myportfolio/img/backgrund.jpg') no-repeat center center/cover;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
     gap: 2rem;
     text-align: left;
 }
@@ -28,18 +28,18 @@ main, header {
     gap: 2rem;
 }
 
-.navbar {
-    width: 100%;
+nav {
     background: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
+    padding: 20rem;
     border-radius: 10px;
-    margin-bottom: 2rem;
+
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-around;
     list-style: none;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .nav-link {
