@@ -76,7 +76,7 @@ const fetchData = async () => {
 
     console.log("Filter Result:", filterResult);
 
-    // Fyll filterelementen med data
+    // FILTRERING
     const dayFilter = document.getElementById("day-filter");
     const stageFilter = document.getElementById("stage-filter");
     const genreFilter = document.getElementById("genre-filter");
