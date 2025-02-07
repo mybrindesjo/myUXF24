@@ -4,18 +4,32 @@
     box-sizing: border-box;
 }
 
+h1, h2 {
+    font-family: 'Modak';
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+
+
+.ticket {
+    color: #f80303;
+}
+
+
+main {
+    font-family: sans-serif;
+}
+
+
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     text-align: center;
-    background-color: #fefefe;
-}
+    }
 
 header {
     background-color: #ff4081;
@@ -48,7 +62,7 @@ footer {
     gap: 1rem;
 }
 
-.info-container {
+.info-contianer {
     display: flex;
     flex-direction: column;
     background-color: #d3d3d3;
@@ -74,27 +88,25 @@ footer {
     background-color: #cccccc;
 }
 
+
 .info, .info-artist, .info-food {
     background-color: #f8bbd0;
-    padding: 3rem;
+    padding: 1rem;
     margin: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .contact-form, .ticket-form {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    margin: 1rem auto; /* Center the form */
+    padding: 2rem;
+    margin: 1rem;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     gap: 1rem;
-    max-width: 600px; /* Optional: Set a max-width for better centering */
+    min-width: 100%;
 }
 
 form {
@@ -138,19 +150,12 @@ input, textarea {
 }
 
 a:hover {
-    color: #ffff05;
+    color: #ff4081;
 }
 
 a {
     color: #ffffff;
     text-decoration: none;
-}
-.mail {
-    color: #1e00ff;
-}
-
-.ticket {
-    color: #ff4081;    
 }
 
 label {
@@ -171,6 +176,7 @@ label {
     margin-top: 1rem;
 }
 
+
 .card {
     display: flex;
     flex-direction: column;
@@ -181,8 +187,8 @@ label {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     gap: 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
-}
 
+}
 .card-details {
     text-align: left;
     background-color: #ffcc80;
@@ -231,7 +237,7 @@ label {
     transform: scale(1.1);
 }
 
-.info-card, .contact-card {
+.info-card {
     background-color: #ffffff;
     padding: 1rem;
     margin: 1rem;
@@ -240,16 +246,7 @@ label {
     text-align: left;
 }
 
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 1rem;
-    margin: 1rem;
-    gap: 1rem;
-}
-
-header, footer, #card-container, .info-artist, .info-food {
+header, footer, #card-container, .contact-form .ticket-form, .info-artist, .info-food{
     background: linear-gradient(45deg, #ff4081, #ff80ab, #ff4081, #ffcc80, #ff4081);
 }
 
@@ -258,8 +255,16 @@ header, footer, #card-container, .info-artist, .info-food {
 }
 
 button:hover {
-    background-color: #ffff05;
-    color: #000000;
+    background-color: #ffcc80;
+    color: #2c1b01;
+}
+
+input, textarea {
+    border: 1px solid #ff80ab;
+}
+
+a:hover {
+    color: #d2ec08;
 }
 
 .filters {
@@ -276,11 +281,12 @@ button:hover {
 .filter-continer {
     margin: 1rem;
     padding: 1rem;
-    background-color: #ffc6d9;
+    background-color: #ffffff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffc6d9;
 }
 
 .genre-filter, .day-filter, .stage-filter {
@@ -291,6 +297,7 @@ button:hover {
     border-radius: 10px;
 }
 
+
 #genre-filter, #day-filter, #stage-filter {
     display: flex;
     justify-content: center;
@@ -300,24 +307,8 @@ button:hover {
     border-radius: 10px;
 }
 
-.image {
-    width: 100%;
-    height: 100%;
-}
+@media (min-width: 800px) {
 
-.image-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    gap: 2rem;
-}
-
-@media (min-width: 1010px) {
     .footer-info {
         display: flex;
         flex-direction: row;
@@ -326,14 +317,16 @@ button:hover {
         width: 100%;    
     }
 
-    #card-container, .info-container, .image-container {
+    
+    #card-container {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;        
         justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .card, .image, .info-card {
+    .card {
         flex: 1 1 300px;
         max-width: 300px;
         justify-content: space-between;
@@ -346,26 +339,22 @@ button:hover {
 
     .aside {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        max-height: 300px;
+        min-width: 400px; 
+        max-height: auto;
         padding: 1rem;
         margin: 1rem;
     }
 
-    .body-wrap {
+    .body-wrap{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        padding: 1rem;
-        margin: 1rem;
-    }   
-
-    .ticket-form{
-        max-width: 1000px;
-        align-content: center;
+        gap: 1rem;
     }
+
 
 
 }

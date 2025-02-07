@@ -1,17 +1,80 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musikfestival</title>
+    <title>Startsida - Musikfestival</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<header>
-    <h1>Musikfestival</h1>
-</header>
+
 <body>
-    <div id="artist-card" class="artist-card"></div>
-    <script src="script.js"></script>
+    <header>
+        <h1>Music Festival Stockholm</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/myMusikfestival/index.html">Startsida</a></li>
+                <li><a href="/myMusikfestival/artist.html">Artister</a></li>
+                <li><a href="/myMusikfestival/stage.html">Scen</a></li>
+                <li><a href="/myMusikfestival/ticket.html">Biljetter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-page">
+        <section class="welcome-section">
+            <h2>Välkommen till Stockholm Music Festival 2025</h2>
+            <p>Upplev musiken som förenar oss, mitt i hjärtat av Stockholm. Festivalen bjuder på en rad spännande artister och uppträdanden från både lokala och internationella musiker.</p>
+        </section>
+        <section class="info-section">
+            <div class="info-card">
+                <h3>Program</h3>
+                <p>Se vårt fullständiga schema och planera din festivalupplevelse.</p>
+                <a href="/myMusikfestival/stage.html" class="info-link">Läs mer</a>
+            </div>
+            <div class="info-card">
+                <h3>Biljetter</h3>
+                <p>Säkra din plats till årets mest efterlängtade musikupplevelse! Biljetterna finns nu tillgängliga online.</p>
+                <a href="/myMusikfestival/ticket.html" class="info-link">Köp biljetter</a>
+            </div>
+            <div class="info-card">
+                <h3>Artister</h3>
+                <p>Upptäck alla fantastiska artister som kommer att uppträda på festivalen.</p>
+                <a href="/myMusikfestival/artist.html" class="info-link">Se artister</a>
+            </div>
+        </section>
+            
+
+        <section class="img-gallery">
+            <h2>Bildgalleri</h2>
+            <p>Se bilder från tidigare festivaler och få en försmak av vad som komma skall.</p>
+            <img src="/myMusikfestival/IMG/Festival/bild1.webp" alt="Bild 1" class="active">
+            <img src="/myMusikfestival/IMG/Festival/bild2.webp" alt="Bild 2">
+            <img src="/myMusikfestival/IMG/Festival/bild3.webp" alt="Bild 3">
+            <img src="/myMusikfestival/IMG/Festival/bild4.webp" alt="Bild 4">
+            <img src="/myMusikfestival/IMG/Festival/bild5.webp" alt="Bild 5">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-info">
+            <div class="footer-contact-info">
+                <p><strong>Kontakta oss</strong></p>
+                <p><strong>Telefon: </strong>08 50 80 05 08</p>
+                <p><strong>E-post: </strong><a href="mailto:kontaktcenter@stockholm.se">kontaktcenter@stockholm.se</a></p>
+                <p><strong>Adress: </strong>Stockholm Music Festival, Stockholm, Sverige</p>
+            </div>
+            <img src="/myMusikfestival/IMG/Icon/logotype--white.svg" alt="Stockholm stad logotyp">
+        </section>
+    
+        <section class="social-media">
+            <img class="social-icon" src="/myMusikfestival/IMG/Icon/instagram.jpeg" alt="Instagram logotyp"></img>
+            <img class="social-icon" src="/myMusikfestival/IMG/Icon/facebook.png" alt="Facebook logotyp"></img>
+            <img class="social-icon" src="/myMusikfestival/IMG/Icon/gmail.png" alt="Gmail logotyp"></img>
+        </section>
+    </footer>
+    <script src="home.js"></script>
 </body>
 </html>

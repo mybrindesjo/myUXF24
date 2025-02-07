@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startsida - Musikfestival</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Music Festival Stockholm</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/stage.html">Scen</a></li>
+                <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="first-page">
+        <div class="info-first-page">
+            <h2>Välkommen till Stockholm Music Festival – En fest för musikälskare!</h2>
+            <p>Stockholm stad presenterar med stolthet årets största musikhändelse: Music Festival Stockholm!</p>
+            <p>Under tre dagar förvandlas vår vackra stad till ett pulserande centrum för musik, gemenskap och festligheter. Med en imponerande lineup av både internationella stjärnor och lokala favoriter kommer festivalen att bjuda på något för alla smaker – oavsett om du älskar pop, rock, elektronisk musik, hiphop, eller jazz.</p>
+            <p>På flera scener runt om i Stockholm kan du njuta av livemusik, matupplevelser, konstinstallationer och en elektrisk stämning som bara vår stad kan erbjuda. Så ta med dig dina vänner och din kärlek till musiken och upplev Stockholm som aldrig förr. Detta är festivalen du inte vill missa!</p>
+            <p>Låt musiken förena oss – vi ses på Stockholm Music Festival! </p>
+        </div>
+
+        <div class="img-gallery">
+            <img src="/Musikfestival copy/IMG/Festival/bild1.webp" alt="Bild 1" class="active">
+            <img src="/Musikfestival copy/IMG/Festival/bild2.webp" alt="Bild 2">
+            <img src="/Musikfestival copy/IMG/Festival/bild3.webp" alt="Bild 3">
+            <img src="/Musikfestival copy/IMG/Festival/bild4.webp" alt="Bild 4">
+            <img src="/Musikfestival copy/IMG/Festival/bild5.webp" alt="Bild 5">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/stage.html">Scen</a></li>
+                <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
+            </ul>
+        </nav>
+        <section class="footer-info">
+            <div class="footer-contact-info">
+                <p><strong>Kontakta oss</strong></p>
+                <p><strong>Telefon: </strong>08 50 80 05 08</p>
+                <p><strong>E-post: </strong><a href="mailto:kontaktcenter@stockholm.se">kontaktcenter@stockholm.se</a></p>
+                <p><strong>Adress: </strong>Stockholm Music Festival, Stockholm, Sverige</p>
+            </div>
+            <img src="/Musikfestival/IMG/logotype--white.svg" alt="Stockholm stad logotyp">
+        </section>
+    
+        <section class="social-media">
+            <img class="social-icon" src="/Musikfestival copy/IMG/Instagram.jpeg" alt="Instagram logotyp"></img>
+            <img class="social-icon" src="/Musikfestival copy/IMG/facebook.png" alt="Facebook logotyp"></img>
+            <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp"></img>
+        </section>
+    </footer>
+
+    <script>
+        // BILDSPEL
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.img-gallery img');
+        const prevButton = document.querySelector('.img-gallery .prev');
+        const nextButton = document.querySelector('.img-gallery .next');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active', 'fade-out');
+                if (i === index) {
+                    slide.classList.add('active');
+                } else if (i === slideIndex) {
+                    slide.classList.add('fade-out');
+                }
+            });
+            slideIndex = index;
+        }
+
+        function showNextSlide() {
+            const nextIndex = (slideIndex + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+
+        function showPrevSlide() {
+            const prevIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(prevIndex);
+        }
+
+        nextButton.addEventListener('click', showNextSlide);
+        prevButton.addEventListener('click', showPrevSlide);
+
+        setInterval(showNextSlide, 9000); // Change slide every 5 seconds
+    </script>
+</body>
+</html>

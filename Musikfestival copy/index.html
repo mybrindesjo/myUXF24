@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artister - Musikfestival</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Music Festival Stockholm</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/stage.html">Scen</a></li>
+                <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="intro-image">
+            <img src="IMG/background.webp" alt="Musikfestival Introduktionsbild">
+        </div>
+        <div class="aside">
+            <section class="filter-container">
+                <h2 class="filters">Filtrera</h2>
+                <div class="filters">
+                    <div class="genre-filter">
+                        <select id="genre-filter">
+                            <option value="all">Genre</option>
+                        </select>
+                    </div>
+                    <div class="day-filter">
+                        <select id="day-filter">
+                            <option value="all">Dag</option>
+                        </select>
+                    </div>
+                    <div class="stage-filter">
+                        <select id="stage-filter">
+                            <option value="all">Scen</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="filter-btn" class="filter-btn">Filtrera</button>
+            </section>
+        </div>
+        <section class="program">
+            <div id="card-container"></div>
+        </section>
+    </main>
+    <footer>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/Musikfestival copy/firstPage.html">Startsida</a></li>
+                <li><a href="/Musikfestival copy/index.html">Artister</a></li>
+                <li><a href="/Musikfestival copy/info.html">Scen</a></li>
+                <li><a href="/Musikfestival copy/ticket.html">Biljetter</a></li>
+                
+            </ul>
+        </nav>
+        <section class="footer-info">
+            <div class="footer-contact-info">
+                <p><strong>Kontakta oss</strong></p>
+                <p><strong>Telefon: </strong>08 50 80 05 08</p>
+                <p><strong>E-post: </strong><a href="mailto:kontaktcenter@stockholm.se">kontaktcenter@stockholm.se</a></p>
+                <p><strong>Adress: </strong>Stockholm Music Festival, Stockholm, Sverige</p>
+            </div>
+            <img src="/Musikfestival/IMG/logotype--white.svg" alt="Stockholm stad logotyp">
+        </section>
+        <section class="social-media">
+            <img class="social-icon" src="/Musikfestival copy/IMG/Instagram.jpeg" alt="Instagram logotyp">
+            <img class="social-icon" src="/Musikfestival copy/IMG/facebook.png" alt="Facebook logotyp">
+            <img class="social-icon" src="/Musikfestival copy/IMG/gmail.png" alt="Gmail logotyp">
+        </section>
+    </footer>
+    <script src="artist.js"></script>
+</body>
+</html>

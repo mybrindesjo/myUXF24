@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scen - Musikfestival</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Music Festival Stockholm</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="/myMusikfestival copy/home.html">Startsida</a></li>
+                <li><a href="/myMusikfestival copy/artist.html">Artister</a></li>
+                <li><a href="/myMusikfestival copy/stage.html">Scen</a></li>
+                <li><a href="/myMusikfestival copy/ticket.html">Biljetter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div class="intro">
+            <div class="info">
+                <h2>Scen</h2>
+            </div>
+        </div>
+
+        <div class="body-wrap">
+            <div class="aside">
+                <section class="filter-container">
+                    <div class="filters">
+                        <div class="genre-filter">
+                            <label for="genre-filter">Genre:</label>
+                            <select id="genre-filter">
+                                <option value="all">Alla</option>
+                            </select>
+                        </div>
+                        <div class="day-filter">
+                            <label for="day-filter">Dag:</label>
+                            <select id="day-filter">
+                                <option value="all">Alla</option>
+                            </select>
+                        </div>
+                        <div class="stage-filter">
+                            <label for="stage-filter">Scen:</label>
+                            <select id="stage-filter">
+                                <option value="all">Alla</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="filter-btn" class="filter-btn">Filtrera</button>
+                </section>
+            </div>
+            <section class="program">
+                <div id="stage-container"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <section class="footer-info">
+            <div class="footer-contact-info">
+                <p><strong>Kontakta oss</strong></p>
+                <p><strong>Telefon: </strong>08 50 80 05 00</p>
+                <p><strong>E-post: </strong><a href="mailto:kontaktcenter@stockholm..se">kontaktcenter@stockholm.se</a></p>
+                <p><strong>Adress: </strong>Stockholm Music Festival, Stockholm, Sverige</p>
+            </div>
+        </section>
+    
+        <section class="social-media">
+            <img class="social-icon" src="/myMusikfestival copy/IMG/Icon/instagram.jpeg" alt="Instagram logotyp"></img>
+            <img class="social-icon" src="/myMusikfestival copy/IMG/Icon/facebook.png" alt="Facebook logotyp"></img>
+            <img class="social-icon" src="/myMusikfestival copy/IMG/Icon/gmail.png" alt="Gmail logotyp"></img>
+        </section>
+    </footer>
+    <script src="stage.js"></script>
+</body>
+</html>
